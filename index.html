@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>three.js webgl - map controls</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <style>
+        body {
+            background-color: #ccc;
+            color: #000;
+        }
+
+        a {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">
+        <a href="https://github.com/szilard-dobai" target="_blank" rel="noopener">Szilard A. DOBAI</a> - Photo Mode <br />
+        Use Left Click to Pan, Right Click to Rotate, Mouse Wheel to Zoom and the GUI in the upper right to set the scene.
+    </div>
+
+    <script type="module">
+
+        import * as THREE from './three.js-master/build/three.module.js';
+        import { GUI } from './three.js-master/examples/jsm/libs/dat.gui.module.js';
+        import { MapControls } from './three.js-master/examples/jsm/controls/OrbitControls.js';
+        import { TransformControls } from './three.js-master/examples/jsm/controls/TransformControls.js';
+        import { GLTFLoader } from './three.js-master/examples/jsm/loaders/GLTFLoader.js';
+
+        var camera, controls, scene, renderer;
+        var spotlightSourceLabel1, spotlightTargetLabel1, spotlight1, spotlightHelper1;
+        var spotlightSourceLabel2, spotlightTargetLabel2, spotlight2, spotlightHelper2;
+
+        init();
+        //render(); // remove when using next line for animation loop (requestAnimationFrame)
+
+        async function init() {
+            let selectedValues = {
+                floorColor: 0xffffff,
+                floorTexture: 0,
+                floorVisible: true,
+                oldFloorColor: {
+                    color: null,
+                    undoColorChange: null
+                },
+                carControlMode: {
+                    disable: false,
+                    translate: null,
+                    rotate: null,
+                    scale: null
+                },
+                car: 0,
+                ambientLightIntensity: 3,
+                ambientLightColor: 0x707070,
+                ambientLightToggle: true,
+                spotlightIntensity1: 5,
+                spotlightColor1: 0x222222,
+                spotlightAngle1: 0.3,
+                spotlightPenumbra1: 0.25,
+                spotlightToggle1: true,
+                spotlightIntensity2: 5,
+                spotlightColor2: 0x222222,
+                spotlightAngle2: 0.3,
+                spotlightPenumbra2: 0.25,
+                spotlightToggle2: true,
+                spotlightHelpersToggle: false,
+                skybox: 0,
+                toPNG: () => {
+                    function download(filename, text) {
+                        var element = document.createElement('a');
+                        element.setAttribute('href', text);
+                        element.setAttribute('download', filename);
+                        element.style.display = 'none';
+                        document.body.appendChild(element);
+                        element.click();
+                        document.body.removeChild(element);
+                    }
+                    const imgData = renderer.domElement.toDataURL("image/png")
+                    download('image.png', imgData)
+                }
+            }
+
+            // SCENE & SKYBOX
+            scene = new THREE.Scene();
+            const sceneLoader = new THREE.CubeTextureLoader();
+            const sceneTexture = [
+                {
+                    name: 'Blue Clouds',
+                    texture: sceneLoader.load([
+                        './skybox/clouds/bluecloud_ft.jpg',
+                        './skybox/clouds/bluecloud_bk.jpg',
+                        './skybox/clouds/bluecloud_up.jpg',
+                        './skybox/clouds/bluecloud_dn.jpg',
+                        './skybox/clouds/bluecloud_rt.jpg',
+                        './skybox/clouds/bluecloud_lf.jpg'
+                    ])
+                },
+                {
+                    name: 'Brown Clouds',
+                    texture: sceneLoader.load([
+                        './skybox/clouds/browncloud_ft.jpg',
+                        './skybox/clouds/browncloud_bk.jpg',
+                        './skybox/clouds/browncloud_up.jpg',
+                        './skybox/clouds/browncloud_dn.jpg',
+                        './skybox/clouds/browncloud_rt.jpg',
+                        './skybox/clouds/browncloud_lf.jpg'
+                    ])
+                },
+                {
+                    name: 'Gray Clouds',
+                    texture: sceneLoader.load([
+                        './skybox/clouds/graycloud_ft.jpg',
+                        './skybox/clouds/graycloud_bk.jpg',
+                        './skybox/clouds/graycloud_up.jpg',
+                        './skybox/clouds/graycloud_dn.jpg',
+                        './skybox/clouds/graycloud_rt.jpg',
+                        './skybox/clouds/graycloud_lf.jpg'
+                    ])
+                },
+                {
+                    name: 'Yellow Clouds',
+                    texture: sceneLoader.load([
+                        './skybox/clouds/yellowcloud_ft.jpg',
+                        './skybox/clouds/yellowcloud_bk.jpg',
+                        './skybox/clouds/yellowcloud_up.jpg',
+                        './skybox/clouds/yellowcloud_dn.jpg',
+                        './skybox/clouds/yellowcloud_rt.jpg',
+                        './skybox/clouds/yellowcloud_lf.jpg'
+                    ])
+                },
+                {
+                    name: 'Arid',
+                    texture: sceneLoader.load([
+                        './skybox/arid/arid2_ft.jpg',
+                        './skybox/arid/arid2_bk.jpg',
+                        './skybox/arid/arid2_up.jpg',
+                        './skybox/arid/arid2_dn.jpg',
+                        './skybox/arid/arid2_rt.jpg',
+                        './skybox/arid/arid2_lf.jpg'
+                    ])
+                },
+                {
+                    name: 'Garage',
+                    texture: sceneLoader.load([
+                        './skybox/garage/px.png',
+                        './skybox/garage/nx.png',
+                        './skybox/garage/py.png',
+                        './skybox/garage/ny.png',
+                        './skybox/garage/pz.png',
+                        './skybox/garage/nz.png'
+                    ])
+                },
+                {
+                    name: 'Autoshop',
+                    texture: sceneLoader.load([
+                        './skybox/autoshop/px.png',
+                        './skybox/autoshop/nx.png',
+                        './skybox/autoshop/py.png',
+                        './skybox/autoshop/ny.png',
+                        './skybox/autoshop/pz.png',
+                        './skybox/autoshop/nz.png'
+                    ])
+                },
+                {
+                    name: 'Machineshop',
+                    texture: sceneLoader.load([
+                        './skybox/machine_shop/px.png',
+                        './skybox/machine_shop/nx.png',
+                        './skybox/machine_shop/py.png',
+                        './skybox/machine_shop/ny.png',
+                        './skybox/machine_shop/pz.png',
+                        './skybox/machine_shop/nz.png'
+                    ])
+                },
+                {
+                    name: 'Parliament',
+                    texture: sceneLoader.load([
+                        './skybox/Parliament/posx.jpg',
+                        './skybox/Parliament/negx.jpg',
+                        './skybox/Parliament/posy.jpg',
+                        './skybox/Parliament/negy.jpg',
+                        './skybox/Parliament/posz.jpg',
+                        './skybox/Parliament/negz.jpg'
+                    ])
+                },
+                {
+                    name: 'Lycksele',
+                    texture: sceneLoader.load([
+                        './skybox/lycksele3/posx.jpg',
+                        './skybox/lycksele3/negx.jpg',
+                        './skybox/lycksele3/posy.jpg',
+                        './skybox/lycksele3/negy.jpg',
+                        './skybox/lycksele3/posz.jpg',
+                        './skybox/lycksele3/negz.jpg'
+                    ])
+                },
+                {
+                    name: 'Fort Point',
+                    texture: sceneLoader.load([
+                        './skybox/FortPoint/posx.jpg',
+                        './skybox/FortPoint/negx.jpg',
+                        './skybox/FortPoint/posy.jpg',
+                        './skybox/FortPoint/negy.jpg',
+                        './skybox/FortPoint/posz.jpg',
+                        './skybox/FortPoint/negz.jpg'
+                    ])
+                },
+                {
+                    name: 'Gamla Stan',
+                    texture: sceneLoader.load([
+                        './skybox/GamlaStan2/posx.jpg',
+                        './skybox/GamlaStan2/negx.jpg',
+                        './skybox/GamlaStan2/posy.jpg',
+                        './skybox/GamlaStan2/negy.jpg',
+                        './skybox/GamlaStan2/posz.jpg',
+                        './skybox/GamlaStan2/negz.jpg'
+                    ])
+                },
+            ]
+            scene.background = sceneTexture[selectedValues.skybox].texture;
+            scene.environment = sceneTexture[selectedValues.skybox].texture;
+            //scene.fog = new THREE.Fog( 0xCCCCCC, 100, 1000 );
+
+            // RENDERER
+            renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.BasicShadowMap;
+            document.body.appendChild(renderer.domElement);
+
+            // CAMERA
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.set(150, 100, 200);
+
+            // CONTROLS
+            controls = new MapControls(camera, renderer.domElement);
+            controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+            controls.dampingFactor = 0.05;
+            controls.screenSpacePanning = false;
+            controls.minDistance = 100;
+            controls.maxDistance = 500;
+            controls.maxPolarAngle = Math.PI / 2;
+
+            // CAR MESH
+            let carScenes = [
+                {
+                    name: 'Toyota Land Cruiser',
+                    url: './models/toyota-land-cruiser/scene.gltf',
+                    yMan: [1, 0, 0]
+                },
+                {
+                    name: 'ZIS-101a Sport',
+                    url: './models/zis-101a-sport-1938/scene.gltf',
+                    yMan: [0, 2, 0]
+                },
+                {
+                    name: 'Porsche 356',
+                    url: './models/porsche-356/scene.gltf',
+                    yMan: [1, 1, 0],
+                    scale: 40
+                },
+                {
+                    name: 'Alfa Romeo Stradale',
+                    url: './models/alfa-romeo-stradale/scene.gltf',
+                    yMan: [0, 0, 7],
+                    scale: 500
+                },
+                // {
+                //     name: 'BMW 3 Series E90',
+                //     url: './models/bmw-e90/scene.gltf',
+                //     yMan: [1, 0, 0],
+                //     scale: 40
+                // },
+                {
+                    name: 'BMW M5 E39',
+                    url: './models/bmw-m5-e39/scene.gltf',
+                    yMan: [0, 0, 7],
+                    rotation: [0, Math.PI, 0],
+                    scale: 20
+                },
+
+            ]
+            const carLoader = (carInfo) => {
+                var loader = new GLTFLoader();
+                return new Promise((resolve, reject) => {
+                    loader.load(carInfo.url, function (gltf) {
+                        const box = new THREE.Box3().setFromObject(gltf.scene);
+                        const center = box.getCenter(new THREE.Vector3());
+                        gltf.scene.position.x += (gltf.scene.position.x - center.x);
+                        gltf.scene.position.y += (gltf.scene.position.y * carInfo.yMan[0] - center.y * carInfo.yMan[1] - carInfo.yMan[2]);
+                        gltf.scene.position.z += (gltf.scene.position.z - center.z);
+                        carInfo.scale && gltf.scene.scale.set(carInfo.scale, carInfo.scale, carInfo.scale)
+                        if (carInfo.rotation) {
+                            gltf.scene.rotation.x -= carInfo.rotation[0]
+                            gltf.scene.rotation.y -= carInfo.rotation[1]
+                            gltf.scene.rotation.z -= carInfo.rotation[2]
+                        }
+                        resolve(gltf.scene)
+                    }, function (xhr) {
+                        //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    }, function (error) {
+                        //console.error(error);
+                    });
+                })
+            }
+            let carControl = new TransformControls(camera, renderer.domElement);
+            carControl.addEventListener('dragging-changed', function (event) {
+                controls.enabled = !event.value;
+            });
+
+            let carMesh = await carLoader(carScenes[selectedValues.car])
+            scene.add(carMesh);
+            carControl.attach(carMesh)
+            scene.add(carControl)
+
+            selectedValues.carControlMode.disable = () => {
+                carControl.showX = false;
+                carControl.showY = false;
+                carControl.showZ = false;
+            }
+            selectedValues.carControlMode.disable()
+            selectedValues.carControlMode.translate = () => {
+                carControl.setMode("translate");
+                carControl.showX = true;
+                carControl.showY = false;
+                carControl.showZ = true;
+            }
+            selectedValues.carControlMode.rotate = () => {
+                carControl.setMode("rotate");
+                carControl.showX = false;
+                carControl.showY = true;
+                carControl.showZ = false;
+            }
+            selectedValues.carControlMode.scale = () => {
+                carControl.setMode("scale");
+                carControl.showX = true;
+                carControl.showY = true;
+                carControl.showZ = true;
+            }
+
+            // FLOOR
+            var floorGeometry = new THREE.PlaneGeometry(100000, 100000);
+            let floorTexture = [
+                { name: 'Concrete 1A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-08_s100-g050.png') },
+                { name: 'Concrete 1B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-08_b005.png') },
+                { name: 'Concrete 2A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-16_b005.png') },
+                { name: 'Concrete 2B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-16_d100.png') },
+                { name: 'Concrete 2C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-16_s050-g025.png') },
+                { name: 'Concrete 3A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-32_b005.png') },
+                { name: 'Concrete 3B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-32_d100.png') },
+                { name: 'Concrete 3C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-32_s025-g050.png') },
+                { name: 'Concrete 4', texture: new THREE.TextureLoader().load('./textures/floor/WM_Concrete-120_1024.png') },
+                { name: 'Pavement 1A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_pavement+06_b030.jpg') },
+                { name: 'Pavement 1B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_pavement+06_d100.jpg') },
+                { name: 'Pavement 1C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_pavement+06_s100+(g015).jpg') },
+                { name: 'Tiles 1A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_tiles+12_b005.jpg') },
+                { name: 'Tiles 1B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_tiles+12_d100.jpg') },
+                { name: 'Tiles 1C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_tiles+12_s100+g050.jpg') },
+                { name: 'Tiles 2', texture: new THREE.TextureLoader().load('./textures/floor/boden_0117_c.jpg') },
+                { name: 'Steel', texture: new THREE.TextureLoader().load('./textures/floor/FloorTreadPattern-3v2_UR_1024.png') },
+                { name: 'Grass', texture: new THREE.TextureLoader().load('./textures/floor/gras_0040_c.jpg') },
+                { name: 'Gravel', texture: new THREE.TextureLoader().load('./textures/floor/Gravel-2_UR_1024.png') },
+                { name: 'Ground', texture: new THREE.TextureLoader().load('./textures/floor/groundv1_01.jpg') }
+            ]
+
+            floorTexture.forEach((item, index) => {
+                item.texture.wrapS = item.texture.wrapT = THREE.RepeatWrapping;
+                if ([0, 1, 2, 3, 4, 12, 13, 14, 17, 19].includes(index))
+                    item.texture.repeat.set(1000, 1000);
+                else if ([8, 9, 10, 11, 15, 18].includes(index))
+                    item.texture.repeat.set(2500, 2500);
+                else
+                    item.texture.repeat.set(5000, 5000)
+            })
+
+            var floorMaterial = new THREE.MeshPhongMaterial({ color: selectedValues.floorColor, map: floorTexture[0].texture })
+            var floorPlane = new THREE.Mesh(floorGeometry, floorMaterial)
+            floorPlane.rotation.x -= Math.PI / 2;
+            floorPlane.position.y -= 1
+            floorPlane.castShadow = true;
+            floorPlane.receiveShadow = true;
+            scene.add(floorPlane)
+
+            floorPlane.setColor = (color) => {
+                floorPlane.material.color.set(color)
+            }
+            floorPlane.getColor = () => {
+                return floorPlane.material.color.getHex()
+            }
+
+            selectedValues.oldFloorColor.undoColorChange = () => {
+                let currentColor = floorPlane.getColor()
+                floorPlane.setColor(selectedValues.oldFloorColor.color)
+                selectedValues.oldFloorColor.color = currentColor;
+            }
+
+
+            // LIGHTS
+            //          AMBIENT LIGHT
+            var ambientLight = new THREE.AmbientLight(selectedValues.ambientLightColor, selectedValues.ambientLightIntensity);
+            scene.add(ambientLight);
+            //          POINT LIGHT
+            // let pointLight = new THREE.PointLight(0xffffff, 0.8)
+            // pointLight.position.set(0, 100, 0)
+            // pointLight.castShadow = true;
+            // pointLight.shadow.camera.near=0.1
+            // pointLight.shadow.camera.far=150
+            // scene.add(pointLight)
+            //          SPOTLIGHT 1
+            spotlight1 = new THREE.SpotLight(selectedValues.spotlightColor1, selectedValues.spotlightIntensity1, 0, selectedValues.spotlightAngle1, selectedValues.spotlightPenumbra1, 2);
+            spotlight1.position.set(0, 200, 200);
+            spotlight1.target.position.set(0, 0, 50)
+            spotlight1.castShadow = true
+            spotlightHelper1 = new THREE.SpotLightHelper(spotlight1, 5)
+            let spotlightSourceControl1 = new TransformControls(camera, renderer.domElement);
+            let spotlightTargetControl1 = new TransformControls(camera, renderer.domElement);
+            spotlightSourceControl1.addEventListener('dragging-changed', function (event) {
+                controls.enabled = !event.value;
+            });
+
+            spotlightTargetControl1.addEventListener('dragging-changed', function (event) {
+                controls.enabled = !event.value;
+            });
+            scene.add(spotlight1);
+            scene.add(spotlight1.target);
+            scene.add(spotlightHelper1)
+            scene.add(spotlightSourceControl1)
+            scene.add(spotlightTargetControl1)
+            spotlightSourceControl1.attach(spotlight1)
+            spotlightTargetControl1.attach(spotlight1.target)
+            //          SPOTLIGHT 2
+            spotlight2 = new THREE.SpotLight(selectedValues.spotlightColor1, selectedValues.spotlightIntensity1, 0, selectedValues.spotlightAngle1, selectedValues.spotlightPenumbra1, 2);
+            spotlight2.position.set(0, 200, -200);
+            spotlight2.target.position.set(0, 0, -50)
+            spotlight2.castShadow = true
+            spotlightHelper2 = new THREE.SpotLightHelper(spotlight2, 5)
+            let spotlightSourceControl2 = new TransformControls(camera, renderer.domElement);
+            let spotlightTargetControl2 = new TransformControls(camera, renderer.domElement);
+            spotlightSourceControl2.addEventListener('dragging-changed', function (event) {
+                controls.enabled = !event.value;
+            });
+
+            spotlightTargetControl2.addEventListener('dragging-changed', function (event) {
+                controls.enabled = !event.value;
+            });
+            scene.add(spotlight2);
+            scene.add(spotlight2.target);
+            scene.add(spotlightHelper2)
+            scene.add(spotlightSourceControl2)
+            scene.add(spotlightTargetControl2)
+            spotlightSourceControl2.attach(spotlight2)
+            spotlightTargetControl2.attach(spotlight2.target)
+
+            // LABELS
+            const textGeometryCreator = (text, size, color) => {
+                var fontLoader = new THREE.FontLoader();
+                return new Promise((resolve, reject) => {
+                    fontLoader.load('./three.js-master/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+                        var geometry = new THREE.TextGeometry(text, {
+                            font: font,
+                            size: size,
+                            height: 1,
+                            curveSegments: 12,
+                            bevelEnabled: false,
+                            bevelThickness: 10,
+                            bevelSize: 8,
+                            bevelOffset: 0,
+                            bevelSegments: 5
+                        });
+                        var material = new THREE.MeshBasicMaterial({ color });
+                        material.depthTest = false;
+                        var mesh = new THREE.Mesh(geometry, material);
+                        resolve(mesh)
+                    }, function (xhr) {
+                        //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    }, function (error) {
+                        //console.error(error);
+                    });
+                })
+            }
+            //      SPOTLIGHT 1 LABEL
+            spotlightSourceLabel1 = await textGeometryCreator("Spotlight Source 1", 10, 0xffffff)
+            spotlightTargetLabel1 = await textGeometryCreator("Spotlight Target 1", 10, 0xffffff)
+            scene.add(spotlightSourceLabel1)
+            scene.add(spotlightTargetLabel1)
+            spotlightSourceLabel1.position.set(spotlight1.position.x, spotlight1.position.y, spotlight1.position.z)
+            spotlightTargetLabel1.position.set(spotlight1.target.position.x, spotlight1.target.position.y, spotlight1.target.position.z)
+            //      SPOTLIGHT 2 LABEL
+            spotlightSourceLabel2 = await textGeometryCreator("Spotlight Source 2", 10, 0xffffff)
+            spotlightTargetLabel2 = await textGeometryCreator("Spotlight Target 2", 10, 0xffffff)
+            scene.add(spotlightSourceLabel2)
+            scene.add(spotlightTargetLabel2)
+            spotlightSourceLabel2.position.set(spotlight2.position.x, spotlight2.position.y, spotlight2.position.z)
+            spotlightTargetLabel2.position.set(spotlight2.target.position.x, spotlight2.target.position.y, spotlight2.target.position.z)
+
+
+
+            window.addEventListener('resize', onWindowResize, false);
+
+            // MENU
+            let gui = new GUI();
+            // SKYBOX
+            let skyboxController = gui.add(selectedValues, 'skybox', sceneTexture.reduce((obj, item, index) => { return { ...obj, [item.name]: index } }, {}))
+            skyboxController.onFinishChange(opt => {
+                scene.background = sceneTexture[opt].texture;
+                scene.environment = sceneTexture[opt].texture;
+            })
+            skyboxController.name('Skybox')
+            //  FLOOR CONTROLS
+            let floorFolder = gui.addFolder('Floor Controls')
+            // floorFolder.open()
+            let floorVisible = floorFolder.add(selectedValues, 'floorVisible')
+            floorVisible.onChange(tog => {
+                floorPlane.visible = tog
+            })
+            floorVisible.name('Visible')
+            let textureController = floorFolder.add(selectedValues, 'floorTexture', floorTexture.reduce((obj, item, index) => { return { ...obj, [item.name]: index } }, {}))
+            textureController.onFinishChange(opt => {
+                floorPlane.material.map = floorTexture[opt].texture
+            })
+            textureController.name('Texture')
+            let colorController = floorFolder.addColor(selectedValues, 'floorColor')
+            colorController.onFinishChange((color) => {
+                selectedValues.oldFloorColor.color = floorPlane.getColor()
+                floorPlane.setColor(color)
+            })
+            colorController.name('Color')
+            let undoColorChangeController = floorFolder.add(selectedValues.oldFloorColor, 'undoColorChange')
+            undoColorChangeController.name('Undo Color Change')
+            //  CAR CONTROLS
+            let carFolder = gui.addFolder('Car Controls')
+            // carFolder.open()
+            let carSelector = carFolder.add(selectedValues, 'car', carScenes.reduce((obj, item, index) => { return { ...obj, [item.name]: index } }, {}))
+            carSelector.name('Car Model')
+            carSelector.onFinishChange(async (opt) => {
+                scene.remove(carMesh)
+                scene.remove(carControl)
+                carMesh = await carLoader(carScenes[opt])
+                carMesh.castShadow = true
+                scene.add(carMesh);
+                carControl.attach(carMesh)
+                scene.add(carControl)
+            })
+            let carControlDisable = carFolder.add(selectedValues.carControlMode, 'disable')
+            carControlDisable.name('Toggle Controls')
+            let carControlTranslate = carFolder.add(selectedValues.carControlMode, 'translate')
+            carControlTranslate.name('Translate')
+            let carControlRotate = carFolder.add(selectedValues.carControlMode, 'rotate')
+            carControlRotate.name('Rotate')
+            // let carControlScale = carFolder.add(selectedValues.carControlMode, 'scale')
+            // carControlScale.name('Scale')
+            //  LIGHT CONTROLS
+            let lightsFolder = gui.addFolder('Light Controls')
+            lightsFolder.open()
+            let ambientLightFolder = lightsFolder.addFolder('Ambient Light')
+            let spotlightFolder1 = lightsFolder.addFolder('Spotlight 1')
+            let spotlightFolder2 = lightsFolder.addFolder('Spotlight 2')
+            //      AMBIENT LIGHT CONTROLS
+            let ambientLightIntensitySelector = ambientLightFolder.add(selectedValues, 'ambientLightIntensity', 0, 10)
+            ambientLightIntensitySelector.onChange(intensity => {
+                if (selectedValues.ambientLightToggle)
+                    ambientLight.intensity = intensity
+            })
+            ambientLightIntensitySelector.name('Intensity')
+            let ambientLightColorSelector = ambientLightFolder.addColor(selectedValues, 'ambientLightColor')
+            ambientLightColorSelector.onChange(color => {
+                if (selectedValues.ambientLightToggle)
+                    ambientLight.color.setHex(color)
+            })
+            ambientLightColorSelector.name('Color')
+            let ambientLightToggle = ambientLightFolder.add(selectedValues, 'ambientLightToggle')
+            ambientLightToggle.onChange(tog => {
+                if (tog)
+                    ambientLight.intensity = selectedValues.ambientLightIntensity
+                else
+                    ambientLight.intensity = 0
+            })
+            ambientLightToggle.name('Toggle')
+            //      SPOTLIGHT 1 CONTROLS
+            let spotlightIntensitySelector1 = spotlightFolder1.add(selectedValues, 'spotlightIntensity1', 0, 10)
+            spotlightIntensitySelector1.onChange(intensity => {
+                if (selectedValues.spotlightToggle1)
+                    spotlight1.intensity = intensity
+            })
+            spotlightIntensitySelector1.name('Intensity')
+            let spotlightAngleSelector1 = spotlightFolder1.add(selectedValues, 'spotlightAngle1', 0, 1)
+            spotlightAngleSelector1.onChange(angle => {
+                if (selectedValues.spotlightToggle1)
+                    spotlight1.angle = angle
+            })
+            spotlightAngleSelector1.name('Angle')
+            let spotlightPenumbraSelector1 = spotlightFolder1.add(selectedValues, 'spotlightPenumbra1', 0, 1)
+            spotlightPenumbraSelector1.onChange(penumbra => {
+                if (selectedValues.spotlightToggle1)
+                    spotlight1.penumbra = penumbra
+            })
+            spotlightPenumbraSelector1.name('Penumbra')
+            let spotlightColor1Selector = spotlightFolder1.addColor(selectedValues, 'spotlightColor1')
+            spotlightColor1Selector.onChange(color => {
+                if (selectedValues.spotlightToggle1)
+                    spotlight1.color.setHex(color)
+            })
+            spotlightColor1Selector.name('Color')
+            let spotlightToggle1 = spotlightFolder1.add(selectedValues, 'spotlightToggle1')
+            spotlightToggle1.onChange(tog => {
+                if (tog)
+                    spotlight1.intensity = selectedValues.spotlightIntensity1
+                else
+                    spotlight1.intensity = 0
+            })
+            spotlightToggle1.name('Toggle')
+            //      SPOTLIGHT 2 CONTROLS
+            let spotlightIntensitySelector2 = spotlightFolder2.add(selectedValues, 'spotlightIntensity2', 0, 20)
+            spotlightIntensitySelector2.onChange(intensity => {
+                if (selectedValues.spotlightToggle2)
+                    spotlight2.intensity = intensity
+            })
+            spotlightIntensitySelector2.name('Intensity')
+            let spotlightAngleSelector2 = spotlightFolder2.add(selectedValues, 'spotlightAngle2', 0, 2)
+            spotlightAngleSelector2.onChange(angle => {
+                if (selectedValues.spotlightToggle2)
+                    spotlight2.angle = angle
+            })
+            spotlightAngleSelector2.name('Angle')
+            let spotlightPenumbraSelector2 = spotlightFolder2.add(selectedValues, 'spotlightPenumbra2', 0, 2)
+            spotlightPenumbraSelector2.onChange(penumbra => {
+                if (selectedValues.spotlightToggle2)
+                    spotlight2.penumbra = penumbra
+            })
+            spotlightPenumbraSelector2.name('Penumbra')
+            let spotlightColor2Selector = spotlightFolder2.addColor(selectedValues, 'spotlightColor2')
+            spotlightColor2Selector.onChange(color => {
+                if (selectedValues.spotlightToggle2)
+                    spotlight2.color.setHex(color)
+            })
+            spotlightColor2Selector.name('Color')
+            let spotlightToggle2 = spotlightFolder2.add(selectedValues, 'spotlightToggle2')
+            spotlightToggle2.onChange(tog => {
+                if (tog)
+                    spotlight2.intensity = selectedValues.spotlightIntensity2
+                else
+                    spotlight2.intensity = 0
+            })
+            spotlightToggle2.name('Toggle')
+            // OTHER CONTROLS
+            let otherFolder = gui.addFolder('Other Controls')
+            let cameraSpacePanningControl = otherFolder.add(controls, 'screenSpacePanning');
+            cameraSpacePanningControl.name('Camera Panning')
+
+
+            let spotlightHelpersToggle = lightsFolder.add(selectedValues, 'spotlightHelpersToggle')
+            spotlightHelpersToggle.onChange(tog => {
+                spotlightSourceLabel1.visible = tog
+                spotlightTargetLabel1.visible = tog
+                spotlightHelper1.visible = tog
+                spotlightSourceControl1.visible = tog
+                spotlightTargetControl1.visible = tog
+                spotlightSourceLabel2.visible = tog
+                spotlightTargetLabel2.visible = tog
+                spotlightHelper2.visible = tog
+                spotlightSourceControl2.visible = tog
+                spotlightTargetControl2.visible = tog
+            })
+            spotlightHelpersToggle.name('Spotlight Helpers')
+            gui.add(selectedValues, 'toPNG').name('Export as PNG')
+
+
+            spotlightSourceLabel1.visible = false
+            spotlightTargetLabel1.visible = false
+            spotlightHelper1.visible = false
+            spotlightSourceControl1.visible = false
+            spotlightTargetControl1.visible = false
+            spotlightSourceLabel2.visible = false
+            spotlightTargetLabel2.visible = false
+            spotlightHelper2.visible = false
+            spotlightSourceControl2.visible = false
+            spotlightTargetControl2.visible = false
+
+            animate();
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            // Spotlight 1
+            spotlightSourceLabel1.lookAt(camera.position)
+            spotlightTargetLabel1.lookAt(camera.position)
+            spotlightSourceLabel1.position.set(spotlight1.position.x, spotlight1.position.y, spotlight1.position.z)
+            spotlightTargetLabel1.position.set(spotlight1.target.position.x, spotlight1.target.position.y, spotlight1.target.position.z)
+            spotlightHelper1.update()
+
+            // Spotlight 2
+            spotlightSourceLabel2.lookAt(camera.position)
+            spotlightTargetLabel2.lookAt(camera.position)
+            spotlightSourceLabel2.position.set(spotlight2.position.x, spotlight2.position.y, spotlight2.position.z)
+            spotlightTargetLabel2.position.set(spotlight2.target.position.x, spotlight2.target.position.y, spotlight2.target.position.z)
+            spotlightHelper2.update()
+
+            controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
+
+            render();
+
+        }
+
+        function render() {
+
+            renderer.render(scene, camera);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
