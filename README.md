@@ -1,6 +1,6 @@
 ## Title: 
 
-Photo Mode - a simple THREE.JS app
+Photo Mode - a simple three.js app
 
 ## Description: 
 
