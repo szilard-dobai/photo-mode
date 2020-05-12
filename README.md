@@ -1,3 +1,8 @@
+![banner image](./banner.jpg "Banner")
+
+# Available online [HERE](https://szilard-dobai.github.io/photo-mode/)!
+
+
 ## Title: 
 
 Photo Mode - a simple three.js app
