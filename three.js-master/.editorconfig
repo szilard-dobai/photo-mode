@@ -1,14 +1,3 @@
-# http://editorconfig.org
-
-root = true
-
-[*]
-end_of_line = lf
-insert_final_newline = true
-
-[*.{js,ts,html}]
-charset = utf-8
-indent_style = tab
-
-[*.{js,ts}]
-trim_trailing_whitespace = true
+version https://git-lfs.github.com/spec/v1
+oid sha256:782d953e3a6f3c5202cc7cd599038f750bbf1994eb4ee60ce775917e5cb82806
+size 187

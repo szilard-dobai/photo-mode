@@ -1,35 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { DepthTexture } from '../../../../src/textures/DepthTexture';
-
-export default QUnit.module( 'Textures', () => {
-
-	QUnit.module( 'DepthTexture', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "isDepthTexture", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:ebe8d5a74ade4405b848c89ad368be0f04bd10f25c7dff61b2f5b3a641164245
+size 636

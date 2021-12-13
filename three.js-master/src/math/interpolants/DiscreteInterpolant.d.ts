@@ -1,14 +1,3 @@
-import { Interpolant } from '../Interpolant';
-
-export class DiscreteInterpolant extends Interpolant {
-
-	constructor(
-		parameterPositions: any,
-		samplesValues: any,
-		sampleSize: number,
-		resultBuffer?: any
-	);
-
-	interpolate_( i1: number, t0: number, t: number, t1: number ): any;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f493d1c4104b3e6f49cbb2863b2c8b533ba07862f4d6321fb8aee59cac2ec9b9
+size 286

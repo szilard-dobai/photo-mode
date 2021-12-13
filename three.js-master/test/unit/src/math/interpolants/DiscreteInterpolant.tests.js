@@ -1,32 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { DiscreteInterpolant } from '../../../../../src/math/interpolants/DiscreteInterpolant';
-
-export default QUnit.module( 'Maths', () => {
-
-	QUnit.module( 'Interpolants', () => {
-
-		QUnit.module( 'DiscreteInterpolant', () => {
-
-			// INHERITANCE
-			QUnit.todo( "Extending", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-			// INSTANCING
-			QUnit.todo( "Instancing", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:f53e27cb446611e2e04a996f132adc660adda465ac3a38a0e29a369989ae1998
+size 591

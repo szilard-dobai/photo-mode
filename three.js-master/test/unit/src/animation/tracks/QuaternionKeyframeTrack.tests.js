@@ -1,24 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { QuaternionKeyframeTrack } from '../../../../../src/animation/tracks/QuaternionKeyframeTrack';
-
-export default QUnit.module( 'Animation', () => {
-
-	QUnit.module( 'Tracks', () => {
-
-		QUnit.module( 'QuaternionKeyframeTrack', () => {
-
-			QUnit.todo( 'write me !', ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a928191dfe3d13537eef4cce364286d765d6ac0f6eabe004245127b58a8a778
+size 453

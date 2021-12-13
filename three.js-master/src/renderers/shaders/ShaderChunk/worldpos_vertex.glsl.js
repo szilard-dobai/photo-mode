@@ -1,15 +1,3 @@
-export default /* glsl */`
-#if defined( USE_ENVMAP ) || defined( DISTANCE ) || defined ( USE_SHADOWMAP )
-
-	vec4 worldPosition = vec4( transformed, 1.0 );
-
-	#ifdef USE_INSTANCING
-
-		worldPosition = instanceMatrix * worldPosition;
-
-	#endif
-
-	worldPosition = modelMatrix * worldPosition;
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:503abd3002bdbb1f2bfcc211144aade91a6ee9361fba83adbbc15ef7f318692b
+size 296

@@ -1,32 +1,3 @@
-export interface WebGLCapabilitiesParameters {
-	precision?: string;
-	logarithmicDepthBuffer?: boolean;
-}
-
-export class WebGLCapabilities {
-
-	constructor(
-		gl: WebGLRenderingContext,
-		extensions: any,
-		parameters: WebGLCapabilitiesParameters
-	);
-
-	readonly isWebGL2: true;
-	precision: string;
-	logarithmicDepthBuffer: boolean;
-	maxTextures: number;
-	maxVertexTextures: number;
-	maxTextureSize: number;
-	maxCubemapSize: number;
-	maxAttributes: number;
-	maxVertexUniforms: number;
-	maxVaryings: number;
-	maxFragmentUniforms: number;
-	vertexTextures: boolean;
-	floatFragmentTextures: boolean;
-	floatVertexTextures: boolean;
-
-	getMaxAnisotropy(): number;
-	getMaxPrecision( precision: string ): string;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2178d9c3e1fda63faa5e15817ddc5a7d993b63a4a2fad2a5c7bef625618ff3d5
+size 703

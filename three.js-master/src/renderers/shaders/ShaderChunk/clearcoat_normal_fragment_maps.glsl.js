@@ -1,18 +1,3 @@
-export default /* glsl */`
-#ifdef USE_CLEARCOAT_NORMALMAP
-
-	vec3 clearcoatMapN = texture2D( clearcoatNormalMap, vUv ).xyz * 2.0 - 1.0;
-	clearcoatMapN.xy *= clearcoatNormalScale;
-
-	#ifdef USE_TANGENT
-
-		clearcoatNormal = normalize( vTBN * clearcoatMapN );
-
-	#else
-
-		clearcoatNormal = perturbNormal2Arb( - vViewPosition, clearcoatNormal, clearcoatMapN );
-
-	#endif
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:46d45f5ade4193a739f9aebf3b64fe35ef4b09c8944391aacd8943a7de665897
+size 374

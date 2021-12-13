@@ -1,28 +1,3 @@
-import { Camera } from './../cameras/Camera';
-import { Light } from './../lights/Light';
-import { Vector2 } from './../math/Vector2';
-import { Vector4 } from './../math/Vector4';
-import { Matrix4 } from './../math/Matrix4';
-import { RenderTarget } from '../renderers/webgl/WebGLRenderLists';
-
-export class LightShadow {
-
-	constructor( camera: Camera );
-
-	camera: Camera;
-	bias: number;
-	radius: number;
-	mapSize: Vector2;
-	map: RenderTarget;
-	mapPass: RenderTarget;
-	matrix: Matrix4;
-
-	copy( source: LightShadow ): this;
-	clone( recursive?: boolean ): this;
-	toJSON(): any;
-	getFrustum(): number;
-	updateMatrices( light: Light, viewportIndex?: number ): void;
-	getViewport( viewportIndex: number ): Vector4;
-	getFrameExtents(): Vector2;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eea54823490763f8482e70fe01b30d2390c1a45d6410f5d4043ca119e29cc649
+size 740

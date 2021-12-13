@@ -1,28 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { CubeCamera } from '../../../../src/cameras/CubeCamera';
-
-export default QUnit.module( 'Cameras', () => {
-
-	QUnit.module( 'CubeCamera', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac3356ed137a209cc5a5cc3b351ed6933d4c88695002440bdfc3d81fddc802c6
+size 496

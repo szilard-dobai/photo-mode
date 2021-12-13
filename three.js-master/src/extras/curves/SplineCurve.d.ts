@@ -1,10 +1,3 @@
-import { Vector2 } from './../../math/Vector2';
-import { Curve } from './../core/Curve';
-
-export class SplineCurve extends Curve<Vector2> {
-
-	constructor( points?: Vector2[] );
-
-	points: Vector2[];
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:42c836aff729a2b1eb1e3e2f435c6e67679c068c6d4285b1eba9d21debe70896
+size 201

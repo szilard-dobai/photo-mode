@@ -1,18 +1,3 @@
-Utilities for converting model files to the Three.js JSON format.
-It's necessary to install the [esm](https://www.npmjs.com/package/esm) npm package before you can use the converters.
-
-## obj2three.js
-
-Usage:
-
-```
-node -r esm obj2three.js model.obj
-```
-
-## fbx2three.js
-
-Usage:
-
-```
-node -r esm fbx2three.js model.fbx
-```
+version https://git-lfs.github.com/spec/v1
+oid sha256:529f7561ad929e70a024f57dcc51079f0447885e2d6ccce3af3c0746e2315c64
+size 322

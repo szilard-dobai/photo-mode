@@ -1,35 +1,3 @@
-import { WebGLRenderTarget } from './WebGLRenderTarget.js';
-
-/**
- * @author Mugen87 / https://github.com/Mugen87
- * @author Matt DesLauriers / @mattdesl
- */
-
-function WebGLMultisampleRenderTarget( width, height, options ) {
-
-	WebGLRenderTarget.call( this, width, height, options );
-
-	this.samples = 4;
-
-}
-
-WebGLMultisampleRenderTarget.prototype = Object.assign( Object.create( WebGLRenderTarget.prototype ), {
-
-	constructor: WebGLMultisampleRenderTarget,
-
-	isWebGLMultisampleRenderTarget: true,
-
-	copy: function ( source ) {
-
-		WebGLRenderTarget.prototype.copy.call( this, source );
-
-		this.samples = source.samples;
-
-		return this;
-
-	}
-
-} );
-
-
-export { WebGLMultisampleRenderTarget };
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1c7dc4ba4abb2403d1a49ff47840cddf18712c44fded135f7ec491e01fdddf8
+size 686

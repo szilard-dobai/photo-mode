@@ -1,21 +1,3 @@
-import {
-	WebGLRenderTarget,
-	WebGLRenderTargetOptions,
-} from './WebGLRenderTarget';
-
-export class WebGLMultisampleRenderTarget extends WebGLRenderTarget {
-
-	constructor(
-		width: number,
-		height: number,
-		options?: WebGLRenderTargetOptions
-	);
-
-	readonly isWebGLMultisampleRenderTarget: true;
-
-	/**
-	 * Specifies the number of samples to be used for the renderbuffer storage.However, the maximum supported size for multisampling is platform dependent and defined via gl.MAX_SAMPLES.
-	 */
-	samples: number;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aef3121cda6e01bf7876823d389dbaaf9fb253b8ca4050ee20d598085ac7a477
+size 513

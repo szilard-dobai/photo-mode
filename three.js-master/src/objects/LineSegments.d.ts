@@ -1,26 +1,3 @@
-import { Geometry } from './../core/Geometry';
-import { Material } from './../materials/Material';
-import { Line } from './Line';
-import { BufferGeometry } from '../core/BufferGeometry';
-
-/**
- * @deprecated
- */
-export const LineStrip: number;
-/**
- * @deprecated
- */
-export const LinePieces: number;
-
-export class LineSegments extends Line {
-
-	constructor(
-		geometry?: Geometry | BufferGeometry,
-		material?: Material | Material[],
-		mode?: number
-	);
-
-	type: 'LineSegments';
-	readonly isLineSegments: true;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce495e917b2391ef846b310831ecabc06dd1d588580a04ca0f9588b95de93a0f
+size 511

@@ -1,13 +1,3 @@
-import { Group } from '../../objects/Group';
-
-export class WebXRController {
-
-	constructor();
-
-	getTargetRaySpace(): Group;
-	getGripSpace(): Group;
-	dispatchEvent( event: object ): this;
-	disconnect( inputSource: object ): this;
-	update( inputSource: object, frame: object, referenceSpace: string ): this;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8eb0e48c0e03f83b3f2401c337e8e8ce984ba3719d3eae323df58dda8e43909c
+size 309

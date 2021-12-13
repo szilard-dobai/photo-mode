@@ -1,28 +1,3 @@
-import { Texture } from './Texture';
-import {
-	Mapping,
-	Wrapping,
-	TextureFilter,
-	PixelFormat,
-	TextureDataType,
-	TextureEncoding,
-} from '../constants';
-
-export class CubeTexture extends Texture {
-
-	constructor(
-		images?: any[], // HTMLImageElement or HTMLCanvasElement
-		mapping?: Mapping,
-		wrapS?: Wrapping,
-		wrapT?: Wrapping,
-		magFilter?: TextureFilter,
-		minFilter?: TextureFilter,
-		format?: PixelFormat,
-		type?: TextureDataType,
-		anisotropy?: number,
-		encoding?: TextureEncoding
-	);
-
-	images: any; // returns and sets the value of Texture.image in the codde ?
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c158b40fdf8a16e850dcacc6739cbae4793d1abaf947b70f70896f5431c9c41
+size 579

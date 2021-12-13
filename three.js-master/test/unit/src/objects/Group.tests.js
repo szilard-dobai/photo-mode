@@ -1,28 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { Group } from '../../../../src/objects/Group';
-
-export default QUnit.module( 'Objects', () => {
-
-	QUnit.module( 'Group', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0c0dd732cd08fb5b98d6f258d8e83a20bdb0328f900595c356c80b11c5622da
+size 481

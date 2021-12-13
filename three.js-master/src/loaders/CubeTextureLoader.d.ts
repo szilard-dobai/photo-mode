@@ -1,16 +1,3 @@
-import { Loader } from './Loader';
-import { LoadingManager } from './LoadingManager';
-import { CubeTexture } from './../textures/CubeTexture';
-
-export class CubeTextureLoader extends Loader {
-
-	constructor( manager?: LoadingManager );
-
-	load(
-		urls: Array<string>,
-		onLoad?: ( texture: CubeTexture ) => void,
-		onProgress?: ( event: ProgressEvent ) => void,
-		onError?: ( event: ErrorEvent ) => void
-	): CubeTexture;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5349196160d03ae091244e4c4bd043b87de393842bdc6660427d1a4c1d33f79
+size 422

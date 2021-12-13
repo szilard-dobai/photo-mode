@@ -1,30 +1,3 @@
-import { Texture } from './Texture';
-import {
-	Mapping,
-	Wrapping,
-	TextureFilter,
-	CompressedPixelFormat,
-	TextureDataType,
-	TextureEncoding,
-} from '../constants';
-
-export class CompressedTexture extends Texture {
-
-	constructor(
-		mipmaps: ImageData[],
-		width: number,
-		height: number,
-		format?: CompressedPixelFormat,
-		type?: TextureDataType,
-		mapping?: Mapping,
-		wrapS?: Wrapping,
-		wrapT?: Wrapping,
-		magFilter?: TextureFilter,
-		minFilter?: TextureFilter,
-		anisotropy?: number,
-		encoding?: TextureEncoding
-	);
-
-	image: { width: number; height: number };
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6521de964796c52ca3f842f0a258fabfaa2b61552c95ec034dcac91d8ba0f487
+size 572

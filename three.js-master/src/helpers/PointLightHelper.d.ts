@@ -1,22 +1,3 @@
-import { PointLight } from './../lights/PointLight';
-import { Color } from './../math/Color';
-import { Matrix4 } from './../math/Matrix4';
-import { Object3D } from './../core/Object3D';
-
-export class PointLightHelper extends Object3D {
-
-	constructor(
-		light: PointLight,
-		sphereSize?: number,
-		color?: Color | string | number
-	);
-
-	light: PointLight;
-	color: Color | string | number | undefined;
-	matrix: Matrix4;
-	matrixAutoUpdate: boolean;
-
-	dispose(): void;
-	update(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c4ecf9f8542b672c26aea017a03d80b435e245e9911dd88465b3e2a91d78442
+size 484

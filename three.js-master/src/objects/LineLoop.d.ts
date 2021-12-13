@@ -1,16 +1,3 @@
-import { Line } from './Line';
-import { Geometry } from './../core/Geometry';
-import { Material } from './../materials/Material';
-import { BufferGeometry } from '../core/BufferGeometry';
-
-export class LineLoop extends Line {
-
-	constructor(
-		geometry?: Geometry | BufferGeometry,
-		material?: Material | Material[]
-	);
-
-	type: 'LineLoop';
-	readonly isLineLoop: true;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3d9f52a0a888093bbe8e779e779b2faca9b3f2f78dfcc73582f631442160779
+size 370

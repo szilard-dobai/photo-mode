@@ -1,25 +1,3 @@
-import { AnimationClip } from './AnimationClip';
-import { AnimationAction } from './AnimationAction';
-import { AnimationBlendMode } from '../constants';
-import { EventDispatcher } from './../core/EventDispatcher';
-import { Object3D } from '../core/Object3D';
-import { AnimationObjectGroup } from './AnimationObjectGroup';
-
-export class AnimationMixer extends EventDispatcher {
-
-	constructor( root: Object3D | AnimationObjectGroup );
-
-	time: number;
-	timeScale: number;
-
-	clipAction( clip: AnimationClip, root?: Object3D | AnimationObjectGroup, blendMode?: AnimationBlendMode ): AnimationAction;
-	existingAction( clip: AnimationClip, root?: Object3D | AnimationObjectGroup ): AnimationAction | null;
-	stopAllAction(): AnimationMixer;
-	update( deltaTime: number ): AnimationMixer;
-	setTime( timeInSeconds: number ): AnimationMixer;
-	getRoot(): Object3D | AnimationObjectGroup;
-	uncacheClip( clip: AnimationClip ): void;
-	uncacheRoot( root: Object3D | AnimationObjectGroup ): void;
-	uncacheAction( clip: AnimationClip, root?: Object3D | AnimationObjectGroup ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f338e0352f62f1031f0155aff734c83ce9ab383992300683b834b465811ebb67
+size 1067

@@ -1,26 +1,3 @@
-import { AudioListener } from './AudioListener';
-import { Audio } from './Audio';
-
-export class PositionalAudio extends Audio<PannerNode> {
-
-	constructor( listener: AudioListener );
-
-	panner: PannerNode;
-
-	getOutput(): PannerNode;
-	setRefDistance( value: number ): this;
-	getRefDistance(): number;
-	setRolloffFactor( value: number ): this;
-	getRolloffFactor(): number;
-	setDistanceModel( value: DistanceModelType ): this;
-	getDistanceModel(): DistanceModelType;
-	setMaxDistance( value: number ): this;
-	getMaxDistance(): number;
-	setDirectionalCone(
-		coneInnerAngle: number,
-		coneOuterAngle: number,
-		coneOuterGain: number
-	): this;
-	updateMatrixWorld( force?: boolean ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c496bb4a7a99a83cf5dcbc7771600bb8fbf674d849048b34681eff58652f02f
+size 684

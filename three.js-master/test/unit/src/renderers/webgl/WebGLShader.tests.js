@@ -1,25 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { WebGLShader } from '../../../../../src/renderers/webgl/WebGLShader';
-
-export default QUnit.module( 'Renderers', () => {
-
-	QUnit.module( 'WebGL', () => {
-
-		QUnit.module( 'WebGLShader', () => {
-
-			// INSTANCING
-			QUnit.todo( "Instancing", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:8bc1329a14b374ed4eeda3b0e1784ac690b276286928a6167dfd3757a628a90e
+size 432

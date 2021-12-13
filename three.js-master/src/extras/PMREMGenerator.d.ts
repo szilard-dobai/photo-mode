@@ -1,17 +1,3 @@
-import { WebGLRenderer } from '../renderers/WebGLRenderer';
-import { WebGLRenderTarget } from '../renderers/WebGLRenderTarget';
-import { Texture } from '../textures/Texture';
-import { CubeTexture } from '../textures/CubeTexture';
-import { Scene } from '../scenes/Scene';
-
-export class PMREMGenerator {
-
-	constructor( renderer:WebGLRenderer );
-	fromScene( scene:Scene, sigma?:number, near?:number, far?:number ): WebGLRenderTarget;
-	fromEquirectangular( equirectangular:Texture ): WebGLRenderTarget;
-	fromCubemap( cubemap:CubeTexture ): WebGLRenderTarget;
-	compileCubemapShader(): void;
-	compileEquirectangularShader(): void;
-	dispose(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a39e71fd9aea81bb04de848f4d3e9564dfb03d03dbc8e622e157d23725830162
+size 646

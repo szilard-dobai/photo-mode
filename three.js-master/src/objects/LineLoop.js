@@ -1,24 +1,3 @@
-import { Line } from './Line.js';
-
-/**
- * @author mgreter / http://github.com/mgreter
- */
-
-function LineLoop( geometry, material ) {
-
-	Line.call( this, geometry, material );
-
-	this.type = 'LineLoop';
-
-}
-
-LineLoop.prototype = Object.assign( Object.create( Line.prototype ), {
-
-	constructor: LineLoop,
-
-	isLineLoop: true,
-
-} );
-
-
-export { LineLoop };
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1ef05dcaef171032879b95bb7ae7610978566c5571f0b9130fd7cd48dbb6397
+size 349

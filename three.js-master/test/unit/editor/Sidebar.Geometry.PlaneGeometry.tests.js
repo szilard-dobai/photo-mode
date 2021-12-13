@@ -1,20 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../editor/js/Sidebar.Geometry.PlaneGeometry';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module.todo( 'Sidebar.Geometry.PlaneGeometry', () => {
-
-		QUnit.test( 'write me !', ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:205c0b839ebb707e4b801f53ffe8f17a355f865297a8c5f352943ba47e96724f
+size 404

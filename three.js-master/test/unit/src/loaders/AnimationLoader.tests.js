@@ -1,34 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { AnimationLoader } from '../../../../src/loaders/AnimationLoader';
-
-export default QUnit.module( 'Loaders', () => {
-
-	QUnit.module( 'AnimationLoader', () => {
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "load", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		QUnit.todo( "parse", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce783c7ef0e559ded25eebea935360afd43e63e5d3a6298058d486c525aabb86
+size 612

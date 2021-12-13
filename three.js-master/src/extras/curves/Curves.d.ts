@@ -1,10 +1,3 @@
-export * from './ArcCurve';
-export * from './CatmullRomCurve3';
-export * from './CubicBezierCurve';
-export * from './CubicBezierCurve3';
-export * from './EllipseCurve';
-export * from './LineCurve';
-export * from './LineCurve3';
-export * from './QuadraticBezierCurve';
-export * from './QuadraticBezierCurve3';
-export * from './SplineCurve';
+version https://git-lfs.github.com/spec/v1
+oid sha256:4998cbff67e76f385d9955674a9f2ac385926e807ed371ed357ccb6f03a4d72e
+size 340

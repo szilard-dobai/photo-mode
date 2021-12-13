@@ -1,19 +1,3 @@
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
-import { Texture } from './Texture.js';
-
-function CanvasTexture( canvas, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy ) {
-
-	Texture.call( this, canvas, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy );
-
-	this.needsUpdate = true;
-
-}
-
-CanvasTexture.prototype = Object.create( Texture.prototype );
-CanvasTexture.prototype.constructor = CanvasTexture;
-CanvasTexture.prototype.isCanvasTexture = true;
-
-export { CanvasTexture };
+version https://git-lfs.github.com/spec/v1
+oid sha256:b05358da647ad63e670568d5f2ec7e7d903b0c9a0b54e1f12f8666edae3afe74
+size 519

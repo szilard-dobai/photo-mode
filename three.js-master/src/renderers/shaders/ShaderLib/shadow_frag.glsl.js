@@ -1,22 +1,3 @@
-export default /* glsl */`
-uniform vec3 color;
-uniform float opacity;
-
-#include <common>
-#include <packing>
-#include <fog_pars_fragment>
-#include <bsdfs>
-#include <lights_pars_begin>
-#include <shadowmap_pars_fragment>
-#include <shadowmask_pars_fragment>
-
-void main() {
-
-	gl_FragColor = vec4( color, opacity * ( 1.0 - getShadowMask() ) );
-
-	#include <tonemapping_fragment>
-	#include <encodings_fragment>
-	#include <fog_fragment>
-
-}
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:db665279698168c04048e491da2c3666ebea42e87936413d6febc23623f3c51f
+size 434

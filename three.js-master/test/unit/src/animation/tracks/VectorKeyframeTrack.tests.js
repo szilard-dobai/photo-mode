@@ -1,24 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { VectorKeyframeTrack } from '../../../../../src/animation/tracks/VectorKeyframeTrack';
-
-export default QUnit.module( 'Animation', () => {
-
-	QUnit.module( 'Tracks', () => {
-
-		QUnit.module( 'VectorKeyframeTrack', () => {
-
-			QUnit.todo( 'write me !', ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:a95f7e58a280aa7882b158e166017308c169fe22b2fc9f0f3294664a018bb312
+size 441

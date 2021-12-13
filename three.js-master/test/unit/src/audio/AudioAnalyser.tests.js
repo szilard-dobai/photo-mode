@@ -1,34 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { AudioAnalyser } from '../../../../src/audio/AudioAnalyser.js';
-
-export default QUnit.module( 'Audios', () => {
-
-	QUnit.module( 'AudioAnalyser', () => {
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "getFrequencyData", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		QUnit.todo( "getAverageFrequency", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a2b4c1cc3b346b487c27db0b5215384ead9785a5c4160c83062f3c6da3d1019
+size 632

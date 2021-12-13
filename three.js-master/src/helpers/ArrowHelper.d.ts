@@ -1,27 +1,3 @@
-import { Vector3 } from './../math/Vector3';
-import { Line } from './../objects/Line';
-import { Mesh } from './../objects/Mesh';
-import { Color } from './../math/Color';
-import { Object3D } from './../core/Object3D';
-
-// Extras / Helpers /////////////////////////////////////////////////////////////////////
-
-export class ArrowHelper extends Object3D {
-
-	constructor(
-		dir: Vector3,
-		origin?: Vector3,
-		length?: number,
-		color?: number,
-		headLength?: number,
-		headWidth?: number
-	);
-
-	line: Line;
-	cone: Mesh;
-
-	setDirection( dir: Vector3 ): void;
-	setLength( length: number, headLength?: number, headWidth?: number ): void;
-	setColor( color: Color | string | number ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:42b5375a12c0f3bee438454abcbc29a61fb6a8dc5be72b1261c288206a8d90d8
+size 685

@@ -1,17 +1,3 @@
-import { Color } from './../math/Color';
-import { LineSegments } from './../objects/LineSegments';
-
-export class GridHelper extends LineSegments {
-
-	constructor(
-		size: number,
-		divisions: number,
-		color1?: Color | number,
-		color2?: Color | number
-	);
-	/**
-	 * @deprecated Colors should be specified in the constructor.
-	 */
-	setColors( color1?: Color | number, color2?: Color | number ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b685a4eab4723f21b06b2988fe276b521c1996eee6b767a2e1f937ccbf349ae
+size 402

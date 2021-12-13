@@ -1,35 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { Box3Helper } from '../../../../src/helpers/Box3Helper';
-
-export default QUnit.module( 'Helpers', () => {
-
-	QUnit.module( 'Box3Helper', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "updateMatrixWorld", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5f164466d7135501eb71077cb0b86f4a2b073b2abe11380c6870107bd59095e
+size 631

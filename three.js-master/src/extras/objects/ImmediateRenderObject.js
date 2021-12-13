@@ -1,22 +1,3 @@
-import { Object3D } from '../../core/Object3D.js';
-
-/**
- * @author alteredq / http://alteredqualia.com/
- */
-
-function ImmediateRenderObject( material ) {
-
-	Object3D.call( this );
-
-	this.material = material;
-	this.render = function ( /* renderCallback */ ) {};
-
-}
-
-ImmediateRenderObject.prototype = Object.create( Object3D.prototype );
-ImmediateRenderObject.prototype.constructor = ImmediateRenderObject;
-
-ImmediateRenderObject.prototype.isImmediateRenderObject = true;
-
-
-export { ImmediateRenderObject };
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee0f99b5627f2295e69aad351dc7710a5504deb053b982a2e660c125b1ad38cf
+size 505

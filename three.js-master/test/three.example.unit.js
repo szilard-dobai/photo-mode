@@ -1,10 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-
-import './unit/qunit-utils.js';
-
-import './unit/example/utils/BufferGeometryUtils.tests';
-import './unit/example/exporters/GLTFExporter.tests';
-import './unit/example/loaders/GLTFLoader.tests';
-import './unit/example/objects/Lensflare.tests';
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fea697268a81c72848ea3b35bf4364196b78e51471013a7d97ea19760da1321
+size 303

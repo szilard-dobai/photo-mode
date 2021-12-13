@@ -1,24 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../../editor/js/commands/RemoveObjectCommand';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module( 'Commands', () => {
-
-		QUnit.module.todo( 'RemoveObjectCommand', () => {
-
-			QUnit.test( 'write me !', ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7bc48ee3e4f0fd865109bc3ea34edf8a9d4a2e8c047c733601efeb4b1e91475
+size 442

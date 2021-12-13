@@ -1,21 +1,3 @@
-import { ShaderMaterial } from './ShaderMaterial.js';
-
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
-function RawShaderMaterial( parameters ) {
-
-	ShaderMaterial.call( this, parameters );
-
-	this.type = 'RawShaderMaterial';
-
-}
-
-RawShaderMaterial.prototype = Object.create( ShaderMaterial.prototype );
-RawShaderMaterial.prototype.constructor = RawShaderMaterial;
-
-RawShaderMaterial.prototype.isRawShaderMaterial = true;
-
-
-export { RawShaderMaterial };
+version https://git-lfs.github.com/spec/v1
+oid sha256:7920acc2b6280a4474320c6d5afe8a53935cc55ea22eaaee9f2b78491df6f7b8
+size 451

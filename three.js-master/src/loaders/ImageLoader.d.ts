@@ -1,19 +1,3 @@
-import { Loader } from './Loader';
-import { LoadingManager } from './LoadingManager';
-
-/**
- * A loader for loading an image.
- * Unlike other loaders, this one emits events instead of using predefined callbacks. So if you're interested in getting notified when things happen, you need to add listeners to the object.
- */
-export class ImageLoader extends Loader {
-
-	constructor( manager?: LoadingManager );
-
-	load(
-		url: string,
-		onLoad?: ( image: HTMLImageElement ) => void,
-		onProgress?: ( event: ProgressEvent ) => void,
-		onError?: ( event: ErrorEvent ) => void
-	): HTMLImageElement;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:290767d42ab176b3db6da68594fc1f084292838a94ce9dd4dcc982070bb97c43
+size 592

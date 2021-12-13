@@ -1,17 +1,3 @@
-export default /* glsl */`
-#ifdef USE_FOG
-
-	#ifdef FOG_EXP2
-
-		float fogFactor = 1.0 - exp( - fogDensity * fogDensity * fogDepth * fogDepth );
-
-	#else
-
-		float fogFactor = smoothstep( fogNear, fogFar, fogDepth );
-
-	#endif
-
-	gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor, fogFactor );
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:1477d5d430282d58187581228e02204bddbf2d95c195c6b8d3fac2d8441eae5a
+size 300

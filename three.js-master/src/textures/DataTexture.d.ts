@@ -1,31 +1,3 @@
-import { Texture } from './Texture';
-import {
-	Mapping,
-	Wrapping,
-	TextureFilter,
-	PixelFormat,
-	TextureDataType,
-	TextureEncoding,
-} from '../constants';
-import { TypedArray } from '../polyfills';
-
-export class DataTexture extends Texture {
-
-	constructor(
-		data: TypedArray,
-		width: number,
-		height: number,
-		format?: PixelFormat,
-		type?: TextureDataType,
-		mapping?: Mapping,
-		wrapS?: Wrapping,
-		wrapT?: Wrapping,
-		magFilter?: TextureFilter,
-		minFilter?: TextureFilter,
-		anisotropy?: number,
-		encoding?: TextureEncoding
-	);
-
-	image: ImageData;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eeaddadc394d86b30b6708dd14b13ef2b49ad4e45f5cd2e2b1b83fb79cdd25b0
+size 561

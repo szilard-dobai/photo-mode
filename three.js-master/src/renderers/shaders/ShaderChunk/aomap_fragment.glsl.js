@@ -1,18 +1,3 @@
-export default /* glsl */`
-#ifdef USE_AOMAP
-
-	// reads channel R, compatible with a combined OcclusionRoughnessMetallic (RGB) texture
-	float ambientOcclusion = ( texture2D( aoMap, vUv2 ).r - 1.0 ) * aoMapIntensity + 1.0;
-
-	reflectedLight.indirectDiffuse *= ambientOcclusion;
-
-	#if defined( USE_ENVMAP ) && defined( STANDARD )
-
-		float dotNV = saturate( dot( geometry.normal, geometry.viewDir ) );
-
-		reflectedLight.indirectSpecular *= computeSpecularOcclusion( dotNV, ambientOcclusion, material.specularRoughness );
-
-	#endif
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a5791867179fb2a7486159e43e8993b46f17d5b7969319fbd160c90648f1341
+size 536

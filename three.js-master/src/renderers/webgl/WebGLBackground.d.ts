@@ -1,19 +1,3 @@
-
-import { Color } from '../../math/Color';
-import { WebGLRenderer } from '../WebGLRenderer';
-import { WebGLState } from './WebGLState';
-import { WebGLObjects } from './WebGLObjects';
-import { WebGLRenderLists } from './WebGLRenderLists';
-import { Scene } from '../../scenes/Scene';
-
-export class WebGLBackground {
-
-	constructor( renderer: WebGLRenderer, state: WebGLState, objects: WebGLObjects, premultipliedAlpha: any );
-
-	getClearColor(): void;
-	setClearColor( color: Color, alpha: any ): void;
-	getClearAlpha(): void;
-	setClearAlpha( alpha: any ): void;
-	render( renderList: WebGLRenderLists, scene: Scene, camera: any, forceClear: any ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6612c78ae20e71ed9b2613fd3010edafe189225b33be57cc75c8239ae036b5a
+size 652

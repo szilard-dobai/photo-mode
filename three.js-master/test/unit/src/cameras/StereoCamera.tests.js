@@ -1,28 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { StereoCamera } from '../../../../src/cameras/StereoCamera';
-
-export default QUnit.module( 'Cameras', () => {
-
-	QUnit.module( 'StereoCamera', () => {
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "update", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5054cca53928a529c7d4c7e75387a82f0afd97b5e246fe002a27b8a0d140add
+size 500

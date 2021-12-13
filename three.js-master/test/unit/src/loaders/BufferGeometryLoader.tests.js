@@ -1,34 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { BufferGeometryLoader } from '../../../../src/loaders/BufferGeometryLoader';
-
-export default QUnit.module( 'Loaders', () => {
-
-	QUnit.module( 'BufferGeometryLoader', () => {
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "load", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		QUnit.todo( "parse", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b2b9d09e3524cc72c5a174bbf3dcfe96ea519060c943091430a837b1eb4c924
+size 627

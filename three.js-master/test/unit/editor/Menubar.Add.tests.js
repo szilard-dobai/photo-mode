@@ -1,20 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../editor/js/Menubar.Add';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module.todo( 'Menubar.Add', () => {
-
-		QUnit.test( 'write me !', ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:e697f355e304e333ab8e934e97a0b3c734d9f7bc71aab29c197f80f7f15314eb
+size 366

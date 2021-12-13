@@ -1,35 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { VideoTexture } from '../../../../src/textures/VideoTexture';
-
-export default QUnit.module( 'Textures', () => {
-
-	QUnit.module( 'VideoTexture', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "isVideoTexture", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:543dcc546e55307bc6711b1902f928a9d65f82f64ad9972b4b24f62f17620450
+size 636

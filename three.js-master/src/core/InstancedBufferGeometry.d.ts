@@ -1,15 +1,3 @@
-import { BufferGeometry } from './BufferGeometry';
-
-/**
- * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferGeometry.js">src/core/InstancedBufferGeometry.js</a>
- */
-export class InstancedBufferGeometry extends BufferGeometry {
-
-	constructor();
-
-	groups: { start: number; count: number; instances: number }[];
-	maxInstancedCount: number;
-
-	addGroup( start: number, count: number, instances: number ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e08d59961a41e5e1509b4f1a5828b5f8aced4ea47cc9ec2f76c84011e530dec
+size 445

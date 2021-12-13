@@ -1,31 +1,3 @@
-import { DepthPackingStrategies } from '../constants';
-import { MaterialParameters, Material } from './Material';
-import { Texture } from './../textures/Texture';
-
-export interface MeshDepthMaterialParameters extends MaterialParameters {
-	map?: Texture | null;
-	alphaMap?: Texture | null;
-	depthPacking?: DepthPackingStrategies;
-	displacementMap?: Texture | null;
-	displacementScale?: number;
-	displacementBias?: number;
-	wireframe?: boolean;
-	wireframeLinewidth?: number;
-}
-
-export class MeshDepthMaterial extends Material {
-
-	constructor( parameters?: MeshDepthMaterialParameters );
-
-	map: Texture | null;
-	alphaMap: Texture | null;
-	depthPacking: DepthPackingStrategies;
-	displacementMap: Texture | null;
-	displacementScale: number;
-	displacementBias: number;
-	wireframe: boolean;
-	wireframeLinewidth: number;
-
-	setValues( parameters: MeshDepthMaterialParameters ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c5d05464f5a9c3f3150e65d21cf064d08496abf3d063bda25e36d27bbbb55fd
+size 878

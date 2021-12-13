@@ -1,21 +1,3 @@
-import { Loader } from './Loader';
-import { LoadingManager } from './LoadingManager';
-import { Texture } from './../textures/Texture';
-import { Material } from './../materials/Material';
-
-export class MaterialLoader extends Loader {
-
-	constructor( manager?: LoadingManager );
-
-	textures: { [key: string]: Texture };
-
-	load(
-		url: string,
-		onLoad: ( material: Material ) => void,
-		onProgress?: ( event: ProgressEvent ) => void,
-		onError?: ( event: Error | ErrorEvent ) => void
-	): void;
-	setTextures( textures: { [key: string]: Texture } ): this;
-	parse( json: any ): Material;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2bb2780cf8f74ff6738671ba68d13bc0f55f8029489b0eadfc4e9c0bc1ae27e
+size 584

@@ -1,25 +1,3 @@
-export default /* glsl */`
-uniform float scale;
-attribute float lineDistance;
-
-varying float vLineDistance;
-
-#include <common>
-#include <color_pars_vertex>
-#include <fog_pars_vertex>
-#include <logdepthbuf_pars_vertex>
-#include <clipping_planes_pars_vertex>
-
-void main() {
-
-	vLineDistance = scale * lineDistance;
-
-	#include <color_vertex>
-	#include <begin_vertex>
-	#include <project_vertex>
-	#include <logdepthbuf_vertex>
-	#include <clipping_planes_vertex>
-	#include <fog_vertex>
-
-}
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa74c88081cabb3e1faf677eb486f148986d5687f27087990f840403a2ef0b41
+size 485

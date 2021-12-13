@@ -1,27 +1,3 @@
-export default /* glsl */`
-
-#ifdef USE_GRADIENTMAP
-
-	uniform sampler2D gradientMap;
-
-#endif
-
-vec3 getGradientIrradiance( vec3 normal, vec3 lightDirection ) {
-
-	// dotNL will be from -1.0 to 1.0
-	float dotNL = dot( normal, lightDirection );
-	vec2 coord = vec2( dotNL * 0.5 + 0.5, 0.0 );
-
-	#ifdef USE_GRADIENTMAP
-
-		return texture2D( gradientMap, coord ).rgb;
-
-	#else
-
-		return ( coord.x < 0.7 ) ? vec3( 0.7 ) : vec3( 1.0 );
-
-	#endif
-
-}
-
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9b9403eff86390b901efd712fd6069ae4bc3d5bba609e8c6d142448086dab7a
+size 439

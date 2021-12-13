@@ -1,20 +1,3 @@
-export default /* glsl */`
-#if defined( USE_MAP ) || defined( USE_ALPHAMAP )
-
-	vec2 uv = ( uvTransform * vec3( gl_PointCoord.x, 1.0 - gl_PointCoord.y, 1 ) ).xy;
-
-#endif
-
-#ifdef USE_MAP
-
-	vec4 mapTexel = texture2D( map, uv );
-	diffuseColor *= mapTexelToLinear( mapTexel );
-
-#endif
-
-#ifdef USE_ALPHAMAP
-
-	diffuseColor.a *= texture2D( alphaMap, uv ).g;
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:8af094d186a6a4e995e14afc49dd9cd085f3a561bd02f86f6827ad3b1889b71c
+size 361

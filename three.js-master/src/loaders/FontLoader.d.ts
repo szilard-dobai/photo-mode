@@ -1,17 +1,3 @@
-import { Loader } from './Loader';
-import { LoadingManager } from './LoadingManager';
-import { Font } from './../extras/core/Font';
-
-export class FontLoader extends Loader {
-
-	constructor( manager?: LoadingManager );
-
-	load(
-		url: string,
-		onLoad?: ( responseFont: Font ) => void,
-		onProgress?: ( event: ProgressEvent ) => void,
-		onError?: ( event: ErrorEvent ) => void
-	): void;
-	parse( json: any ): Font;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:987dbc7d78b979ed143f87be5cad71763cb207a59c66645e073ff863d02a4abd
+size 414

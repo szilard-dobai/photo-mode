@@ -1,13 +1,3 @@
-import { KeyframeTrack } from './../KeyframeTrack';
-import { InterpolationModes } from '../../constants';
-
-export class NumberKeyframeTrack extends KeyframeTrack {
-
-	constructor(
-		name: string,
-		times: any[],
-		values: any[],
-		interpolation?: InterpolationModes
-	);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e248535bb4eeccbe64bf4b3b01c161fd3d35c1a2440e305ca780a4ce0a62da8
+size 272

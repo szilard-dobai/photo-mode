@@ -1,13 +1,3 @@
-import { Object3D } from './../core/Object3D';
-import { Color } from './../math/Color';
-import { LineSegments } from './../objects/LineSegments';
-
-export class BoxHelper extends LineSegments {
-
-	constructor( object: Object3D, color?: Color | string | number );
-
-	update( object?: Object3D ): void;
-
-	setFromObject( object: Object3D ): this;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:84954caa9d50457ac5df7860d7fdd692ad1c71da191cc7f4947f48cff81d18da
+size 344

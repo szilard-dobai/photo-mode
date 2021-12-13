@@ -1,22 +1,3 @@
-export * from './WireframeGeometry';
-export * from './ParametricGeometry';
-export * from './TetrahedronGeometry';
-export * from './OctahedronGeometry';
-export * from './IcosahedronGeometry';
-export * from './DodecahedronGeometry';
-export * from './PolyhedronGeometry';
-export * from './TubeGeometry';
-export * from './TorusKnotGeometry';
-export * from './TorusGeometry';
-export * from './TextGeometry';
-export * from './SphereGeometry';
-export * from './RingGeometry';
-export * from './PlaneGeometry';
-export * from './LatheGeometry';
-export * from './ShapeGeometry';
-export * from './ExtrudeGeometry';
-export * from './EdgesGeometry';
-export * from './ConeGeometry';
-export * from './CylinderGeometry';
-export * from './CircleGeometry';
-export * from './BoxGeometry';
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fa0d8e5a0fc1795797172d3099d1b60924cf7b3f984fee1b0d3095a581a2cce
+size 769

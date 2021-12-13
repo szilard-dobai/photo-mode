@@ -1,32 +1,3 @@
-/**
- * @author alteredq / http://alteredqualia.com/
- */
-
-import { Texture } from './Texture.js';
-
-function CompressedTexture( mipmaps, width, height, format, type, mapping, wrapS, wrapT, magFilter, minFilter, anisotropy, encoding ) {
-
-	Texture.call( this, null, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy, encoding );
-
-	this.image = { width: width, height: height };
-	this.mipmaps = mipmaps;
-
-	// no flipping for cube textures
-	// (also flipping doesn't work for compressed textures )
-
-	this.flipY = false;
-
-	// can't generate mipmaps for compressed textures
-	// mips must be embedded in DDS files
-
-	this.generateMipmaps = false;
-
-}
-
-CompressedTexture.prototype = Object.create( Texture.prototype );
-CompressedTexture.prototype.constructor = CompressedTexture;
-
-CompressedTexture.prototype.isCompressedTexture = true;
-
-
-export { CompressedTexture };
+version https://git-lfs.github.com/spec/v1
+oid sha256:df162d8b6477239f7db6049e89e6ed01dc71f224bac2c46bc85de8ba5b5f9d0f
+size 877

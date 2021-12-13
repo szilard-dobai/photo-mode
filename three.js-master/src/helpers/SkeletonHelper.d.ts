@@ -1,17 +1,3 @@
-import { Object3D } from './../core/Object3D';
-import { Bone } from './../objects/Bone';
-import { LineSegments } from './../objects/LineSegments';
-
-export class SkeletonHelper extends LineSegments {
-
-	constructor( object: Object3D );
-
-	bones: Bone[];
-	root: Object3D;
-
-	readonly isSkeletonHelper: true;
-
-	getBoneList( object: Object3D ): Bone[];
-	update(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8afb71e89f5c65dac0c7027f20ab172accb6280cb4ae2abe7d4d4e8322b62824
+size 366

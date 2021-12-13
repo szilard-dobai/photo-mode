@@ -1,11 +1,3 @@
-import { Vector2 } from './../../math/Vector2';
-import { Curve } from './../core/Curve';
-
-export class LineCurve extends Curve<Vector2> {
-
-	constructor( v1: Vector2, v2: Vector2 );
-
-	v1: Vector2;
-	v2: Vector2;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecfca26adaedab67d8ec00e190fd58803452ac56b614d31905689eff2669b5ab
+size 213

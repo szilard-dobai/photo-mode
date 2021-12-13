@@ -1,22 +1,3 @@
-export default /* glsl */`
-
-#include <envmap_common_pars_fragment>
-uniform float opacity;
-
-varying vec3 vWorldDirection;
-
-#include <cube_uv_reflection_fragment>
-
-void main() {
-
-	vec3 vReflect = vWorldDirection;
-	#include <envmap_fragment>
-
-	gl_FragColor = envColor;
-	gl_FragColor.a *= opacity;
-
-	#include <tonemapping_fragment>
-	#include <encodings_fragment>
-
-}
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ce6bc586bd46d7048717bfb6210092c9aaa51d194d9d2e5114d572aafae878d
+size 365

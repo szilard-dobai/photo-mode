@@ -1,14 +1,3 @@
-export default /* glsl */`
-varying vec3 vWorldDirection;
-
-#include <common>
-
-void main() {
-
-	vWorldDirection = transformDirection( position, modelMatrix );
-
-	#include <begin_vertex>
-	#include <project_vertex>
-
-}
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:765d6a1819a0c2062f82907df940345e360c87b997e19514e4177610945d12a7
+size 215

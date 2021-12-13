@@ -1,13 +1,3 @@
-import { Camera } from './../cameras/Camera';
-import { LineSegments } from './../objects/LineSegments';
-
-export class CameraHelper extends LineSegments {
-
-	constructor( camera: Camera );
-
-	camera: Camera;
-	pointMap: { [id: string]: number[] };
-
-	update(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a43d48f29a4fccaccc8c87aa372a3f60fe27517887cca4526059963cfa1ffac
+size 265

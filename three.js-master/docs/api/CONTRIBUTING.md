@@ -1,7 +1,3 @@
-Contributing to the documentation
-=================================
-
-- To link to the page for `ClassName`, use `[page:ClassName link title]` (or just `[page:ClassName]`). Use `[page:ClassName.memberName]` to link to a class member (a property or method) called `memberName` on the page for `ClassName`. You can write `[page:.memberName]` to link to a property or method called `memberName` on the same page.
-- Use `[example:exampleName title]` (not just `[example:exampleName]`) to link to the example `threejs.org/examples/#exampleName`.
-- Document a property by writing `<h3>[property:TypeName propertyName]</h3>`.
-- Document a method using `<h3>[method:ReturnType methodName]</h3>`.
+version https://git-lfs.github.com/spec/v1
+oid sha256:e054eb36e3121f192bfa4a827519e5c295599e27383e5b0749d24b9e66e6008a
+size 687

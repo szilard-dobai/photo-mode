@@ -1,30 +1,3 @@
-import { Interpolant } from '../Interpolant.js';
-
-/**
- *
- * Interpolant that evaluates to the sample value at the position preceeding
- * the parameter.
- *
- * @author tschw
- */
-
-function DiscreteInterpolant( parameterPositions, sampleValues, sampleSize, resultBuffer ) {
-
-	Interpolant.call( this, parameterPositions, sampleValues, sampleSize, resultBuffer );
-
-}
-
-DiscreteInterpolant.prototype = Object.assign( Object.create( Interpolant.prototype ), {
-
-	constructor: DiscreteInterpolant,
-
-	interpolate_: function ( i1 /*, t0, t, t1 */ ) {
-
-		return this.copySampleValue_( i1 - 1 );
-
-	}
-
-} );
-
-
-export { DiscreteInterpolant };
+version https://git-lfs.github.com/spec/v1
+oid sha256:59fa1fa422838ccee4eb14f5e3dacc0124ab4726db68c0423044a3d8292a2cb7
+size 625

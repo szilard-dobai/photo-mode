@@ -1,25 +1,3 @@
-import { Geometry } from './../core/Geometry';
-import { Material } from './../materials/Material';
-import { Raycaster } from './../core/Raycaster';
-import { Object3D } from './../core/Object3D';
-import { BufferGeometry } from '../core/BufferGeometry';
-import { Intersection } from '../core/Raycaster';
-
-export class Line extends Object3D {
-
-	constructor(
-		geometry?: Geometry | BufferGeometry,
-		material?: Material | Material[],
-		mode?: number
-	);
-
-	geometry: Geometry | BufferGeometry;
-	material: Material | Material[];
-
-	type: 'Line' | 'LineLoop' | 'LineSegments';
-	readonly isLine: true;
-
-	computeLineDistances(): this;
-	raycast( raycaster: Raycaster, intersects: Intersection[] ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83177ded086aa8912b05d703ac48a353702759b309dfecb904d82e2420baa8d3
+size 697

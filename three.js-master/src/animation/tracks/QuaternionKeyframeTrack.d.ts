@@ -1,13 +1,3 @@
-import { KeyframeTrack } from './../KeyframeTrack';
-import { InterpolationModes } from '../../constants';
-
-export class QuaternionKeyframeTrack extends KeyframeTrack {
-
-	constructor(
-		name: string,
-		times: any[],
-		values: any[],
-		interpolation?: InterpolationModes
-	);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0659da376802944f1fd95f661f24774ab73dccc94ed140ef2bc11656feaa535a
+size 276

@@ -1,20 +1,3 @@
-import { Loader } from './Loader';
-import { LoadingManager } from './LoadingManager';
-import { Texture } from './../textures/Texture';
-
-/**
- * Class for loading a texture.
- * Unlike other loaders, this one emits events instead of using predefined callbacks. So if you're interested in getting notified when things happen, you need to add listeners to the object.
- */
-export class TextureLoader extends Loader {
-
-	constructor( manager?: LoadingManager );
-
-	load(
-		url: string,
-		onLoad?: ( texture: Texture ) => void,
-		onProgress?: ( event: ProgressEvent ) => void,
-		onError?: ( event: ErrorEvent ) => void
-	): Texture;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3b0483b154b6a496f0b76646fad75af104aa569924d8dbef4e4f15fd61eea82
+size 625

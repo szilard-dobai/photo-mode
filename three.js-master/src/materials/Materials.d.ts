@@ -1,18 +1,3 @@
-export * from './ShadowMaterial';
-export * from './SpriteMaterial';
-export * from './RawShaderMaterial';
-export * from './ShaderMaterial';
-export * from './PointsMaterial';
-export * from './MeshPhysicalMaterial';
-export * from './MeshStandardMaterial';
-export * from './MeshPhongMaterial';
-export * from './MeshToonMaterial';
-export * from './MeshNormalMaterial';
-export * from './MeshLambertMaterial';
-export * from './MeshDepthMaterial';
-export * from './MeshDistanceMaterial';
-export * from './MeshBasicMaterial';
-export * from './MeshMatcapMaterial';
-export * from './LineDashedMaterial';
-export * from './LineBasicMaterial';
-export * from './Material';
+version https://git-lfs.github.com/spec/v1
+oid sha256:355d745d283e4f89bd785542bdba50ae1ab31ca5fa9618f2e221fbe12b9933cc
+size 658

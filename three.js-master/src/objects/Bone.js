@@ -1,26 +1,3 @@
-import { Object3D } from '../core/Object3D.js';
-
-/**
- * @author mikael emtinger / http://gomo.se/
- * @author alteredq / http://alteredqualia.com/
- * @author ikerr / http://verold.com
- */
-
-function Bone() {
-
-	Object3D.call( this );
-
-	this.type = 'Bone';
-
-}
-
-Bone.prototype = Object.assign( Object.create( Object3D.prototype ), {
-
-	constructor: Bone,
-
-	isBone: true
-
-} );
-
-
-export { Bone };
+version https://git-lfs.github.com/spec/v1
+oid sha256:004f0f1c00632d9846fb67e4530aa17e77980785539b0ea6bc6dc2039efa7672
+size 389

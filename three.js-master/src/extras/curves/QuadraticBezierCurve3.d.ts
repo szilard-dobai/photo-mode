@@ -1,12 +1,3 @@
-import { Vector3 } from './../../math/Vector3';
-import { Curve } from './../core/Curve';
-
-export class QuadraticBezierCurve3 extends Curve<Vector3> {
-
-	constructor( v0: Vector3, v1: Vector3, v2: Vector3 );
-
-	v0: Vector3;
-	v1: Vector3;
-	v2: Vector3;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:205693f0e97ac6a1c6ba30a7f02060e5afb8212b5daf6a63d0c482dcc60f345c
+size 252

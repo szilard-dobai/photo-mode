@@ -1,30 +1,3 @@
-import { CylinderGeometry } from './CylinderGeometry';
-import { CylinderBufferGeometry } from './CylinderGeometry';
-
-export class ConeBufferGeometry extends CylinderBufferGeometry {
-
-	constructor(
-		radius?: number,
-		height?: number,
-		radialSegment?: number,
-		heightSegment?: number,
-		openEnded?: boolean,
-		thetaStart?: number,
-		thetaLength?: number
-	);
-
-}
-
-export class ConeGeometry extends CylinderGeometry {
-
-	constructor(
-		radius?: number,
-		height?: number,
-		radialSegment?: number,
-		heightSegment?: number,
-		openEnded?: boolean,
-		thetaStart?: number,
-		thetaLength?: number
-	);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:155a9c921f4c60f2ae64c65cf27999815523b7a167cf3f77f076869b4985d8ef
+size 598

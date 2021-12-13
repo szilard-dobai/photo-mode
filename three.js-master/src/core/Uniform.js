@@ -1,24 +1,3 @@
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
-function Uniform( value ) {
-
-	if ( typeof value === 'string' ) {
-
-		console.warn( 'THREE.Uniform: Type parameter is no longer needed.' );
-		value = arguments[ 1 ];
-
-	}
-
-	this.value = value;
-
-}
-
-Uniform.prototype.clone = function () {
-
-	return new Uniform( this.value.clone === undefined ? this.value : this.value.clone() );
-
-};
-
-export { Uniform };
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fe5f9c38ed5a35264d184c4e649cd26f3810110cc133d40340e29a4d1b26223
+size 397

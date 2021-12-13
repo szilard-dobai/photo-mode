@@ -1,18 +1,3 @@
-import { EllipseCurve } from './EllipseCurve.js';
-
-
-function ArcCurve( aX, aY, aRadius, aStartAngle, aEndAngle, aClockwise ) {
-
-	EllipseCurve.call( this, aX, aY, aRadius, aRadius, aStartAngle, aEndAngle, aClockwise );
-
-	this.type = 'ArcCurve';
-
-}
-
-ArcCurve.prototype = Object.create( EllipseCurve.prototype );
-ArcCurve.prototype.constructor = ArcCurve;
-
-ArcCurve.prototype.isArcCurve = true;
-
-
-export { ArcCurve };
+version https://git-lfs.github.com/spec/v1
+oid sha256:4558642de873500a343028713071fb1fecde2d90f6f16b515da81a3375517e0d
+size 415

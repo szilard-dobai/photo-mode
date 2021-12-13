@@ -1,20 +1,3 @@
-export class WebGLIndexedBufferRenderer {
-
-	constructor(
-		gl: WebGLRenderingContext,
-		extensions: any,
-		info: any,
-		capabilities: any
-	);
-
-	setMode( value: any ): void;
-	setIndex( index: any ): void;
-	render( start: any, count: number ): void;
-	renderInstances(
-		geometry: any,
-		start: any,
-		count: number,
-		primcount: number
-	): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3664c9960372fb8670b5587bf9180e2772d3fd958371b863423d095252f44697
+size 347

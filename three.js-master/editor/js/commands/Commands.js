@@ -1,21 +1,3 @@
-export { AddObjectCommand } from './AddObjectCommand.js';
-export { AddScriptCommand } from './AddScriptCommand.js';
-export { MoveObjectCommand } from './MoveObjectCommand.js';
-export { MultiCmdsCommand } from './MultiCmdsCommand.js';
-export { RemoveObjectCommand } from './RemoveObjectCommand.js';
-export { RemoveScriptCommand } from './RemoveScriptCommand.js';
-export { SetColorCommand } from './SetColorCommand.js';
-export { SetGeometryCommand } from './SetGeometryCommand.js';
-export { SetGeometryValueCommand } from './SetGeometryValueCommand.js';
-export { SetMaterialColorCommand } from './SetMaterialColorCommand.js';
-export { SetMaterialCommand } from './SetMaterialCommand.js';
-export { SetMaterialMapCommand } from './SetMaterialMapCommand.js';
-export { SetMaterialValueCommand } from './SetMaterialValueCommand.js';
-export { SetMaterialVectorCommand } from './SetMaterialVectorCommand.js';
-export { SetPositionCommand } from './SetPositionCommand.js';
-export { SetRotationCommand } from './SetRotationCommand.js';
-export { SetScaleCommand } from './SetScaleCommand.js';
-export { SetSceneCommand } from './SetSceneCommand.js';
-export { SetScriptValueCommand } from './SetScriptValueCommand.js';
-export { SetUuidCommand } from './SetUuidCommand.js';
-export { SetValueCommand } from './SetValueCommand.js';
+version https://git-lfs.github.com/spec/v1
+oid sha256:c871ce499597090af62ca3b099d3b6bcf893761a2af9a6d601014577bef3e640
+size 1314

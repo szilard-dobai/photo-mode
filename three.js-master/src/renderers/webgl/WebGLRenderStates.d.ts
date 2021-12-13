@@ -1,25 +1,3 @@
-import { Scene } from '../../scenes/Scene';
-import { Camera } from '../../cameras/Camera';
-import { Light } from '../../lights/Light';
-import { WebGLLights } from './WebGLLights';
-
-interface WebGLRenderState {
-
-	init(): void;
-	state: {
-		lightsArray: Light[];
-		shadowsArray: Light[];
-		lights: WebGLLights;
-	};
-	setupLights( camera: Camera ): void;
-	pushLight( light: Light ): void;
-	pushShadow( shadowLight: Light ): void;
-
-}
-
-export class WebGLRenderStates {
-
-	get( scene: Scene, camera: Camera ): WebGLRenderState;
-	dispose(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d98fbd5d36ceed5ae68799b801047589f6a1324561f727da724d6670ac032f9
+size 540

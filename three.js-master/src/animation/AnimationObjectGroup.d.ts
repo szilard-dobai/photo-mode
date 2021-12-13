@@ -1,19 +1,3 @@
-export class AnimationObjectGroup {
-
-	constructor( ...args: any[] );
-
-	uuid: string;
-	stats: {
-		bindingsPerObject: number;
-		objects: {
-			total: number;
-			inUse: number;
-		};
-	};
-	readonly isAnimationObjectGroup: true;
-
-	add( ...args: any[] ): void;
-	remove( ...args: any[] ): void;
-	uncache( ...args: any[] ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f01f1a897d15abb687597ef551b2b23ffb7c872e11187f649f86de79cf246d4
+size 323

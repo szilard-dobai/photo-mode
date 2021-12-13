@@ -1,9 +1,3 @@
-{
-  "compilerOptions": {
-    "noEmit": true,
-    "target": "ES6"
-  },
-  "include": [
-    "../../examples/jsm/**/*.ts"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6987cca5879be828b43269040400b2a4bd1693b0cb3c2f1371408e2166fa2c48
+size 124

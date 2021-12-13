@@ -1,35 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { ShadowMaterial } from '../../../../src/materials/ShadowMaterial';
-
-export default QUnit.module( 'Materials', () => {
-
-	QUnit.module( 'LineBasicMaterial', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "isShadowMaterial", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ebc8acafb828c935d3310591b3090f8616ad237e47b6312748715c98b304932
+size 649

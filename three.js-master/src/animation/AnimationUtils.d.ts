@@ -1,32 +1,3 @@
-import { AnimationClip } from './AnimationClip';
-
-export namespace AnimationUtils {
-	export function arraySlice( array: any, from: number, to: number ): any;
-	export function convertArray( array: any, type: any, forceClone: boolean ): any;
-	export function isTypedArray( object: any ): boolean;
-	export function getKeyFrameOrder( times: number[] ): number[];
-	export function sortedArray(
-		values: any[],
-		stride: number,
-		order: number[]
-	): any[];
-	export function flattenJSON(
-		jsonKeys: string[],
-		times: any[],
-		values: any[],
-		valuePropertyName: string
-	): void;
-	export function subclip(
-		sourceClip: AnimationClip,
-		name: string,
-		startFrame: number,
-		endFrame: number,
-		fps?: number
-	): AnimationClip;
-	export function makeClipAdditive(
-		targetClip: AnimationClip,
-		referenceFrame?: number,
-		referenceClip?: AnimationClip,
-		fps?: number
-	): AnimationClip;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:78542e930e1fa9e25002541bbab95f1bba49eb80472634c727304136cf6f8c28
+size 883

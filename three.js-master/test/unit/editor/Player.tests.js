@@ -1,20 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../editor/js/Player';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module.todo( 'Player', () => {
-
-		QUnit.test( 'write me !', ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:a069c7e05b63924558ae69a67efa46556324f12698774eda1957acfd4d692049
+size 356

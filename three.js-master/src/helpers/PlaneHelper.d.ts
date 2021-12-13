@@ -1,13 +1,3 @@
-import { Plane } from './../math/Plane';
-import { LineSegments } from './../objects/LineSegments';
-
-export class PlaneHelper extends LineSegments {
-
-	constructor( plane: Plane, size?: number, hex?: number );
-
-	plane: Plane;
-	size: number;
-
-	updateMatrixWorld( force?: boolean ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1adc4dc3122b4294ce592cae9756513e4a7336fbd95688692ebbfdbe7bb39f20
+size 288

@@ -1,25 +1,3 @@
-import { Geometry } from './../core/Geometry';
-import { Material } from './../materials/Material';
-import { Raycaster } from './../core/Raycaster';
-import { Object3D } from './../core/Object3D';
-import { BufferGeometry } from '../core/BufferGeometry';
-import { Intersection } from '../core/Raycaster';
-
-export class Mesh extends Object3D {
-
-	constructor(
-		geometry?: Geometry | BufferGeometry,
-		material?: Material | Material[]
-	);
-
-	geometry: Geometry | BufferGeometry;
-	material: Material | Material[];
-	morphTargetInfluences?: number[];
-	morphTargetDictionary?: { [key: string]: number };
-	readonly isMesh: true;
-	type: string;
-
-	updateMorphTargets(): void;
-	raycast( raycaster: Raycaster, intersects: Intersection[] ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:95ecc4f7fb56ac3a0d8074e60a7819147983c8cfa3a4f06ad8fdbcfce9c96c48
+size 734

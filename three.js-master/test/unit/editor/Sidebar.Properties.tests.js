@@ -1,20 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../editor/js/Sidebar.Properties';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module.todo( 'Sidebar.Properties', () => {
-
-		QUnit.test( 'write me !', ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:646e2cb57c312871c8751fd6d3e871ae42ca6ac685c68498aa97f4966a213714
+size 380

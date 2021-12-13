@@ -1,27 +1,3 @@
-import { IUniform } from './UniformsLib';
-
-export interface Shader {
-	uniforms: { [uniform: string]: IUniform };
-	vertexShader: string;
-	fragmentShader: string;
-}
-
-export let ShaderLib: {
-	[name: string]: Shader;
-	basic: Shader;
-	lambert: Shader;
-	phong: Shader;
-	standard: Shader;
-	matcap: Shader;
-	points: Shader;
-	dashed: Shader;
-	depth: Shader;
-	normal: Shader;
-	sprite: Shader;
-	background: Shader;
-	cube: Shader;
-	equirect: Shader;
-	distanceRGBA: Shader;
-	shadow: Shader;
-	physical: Shader;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d8e630c34b0da8bc4876615199656aed775344924292591d3574e2eae7282d0
+size 500

@@ -1,7 +1,3 @@
-examples/*
-!examples/js/
-test/
-utils/
-docs/
-editor/
-.DS_Store
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc9e8bab337a4518ab5c535e301c122d78c58a1faba037c7572cb619127b72c8
+size 62

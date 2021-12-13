@@ -1,33 +1,3 @@
-import { WebGLRenderer } from './../WebGLRenderer';
-import { WebGLShader } from './WebGLShader';
-import { WebGLUniforms } from './WebGLUniforms';
-
-export class WebGLProgram {
-
-	constructor(
-		renderer: WebGLRenderer,
-		cacheKey: string,
-		parameters: object
-	);
-
-	name: string;
-	id: number;
-	cacheKey: string; // unique identifier for this program, used for looking up compiled programs from cache.
-	usedTimes: number;
-	program: any;
-	vertexShader: WebGLShader;
-	fragmentShader: WebGLShader;
-	/**
-	 * @deprecated Use {@link WebGLProgram#getUniforms getUniforms()} instead.
-	 */
-	uniforms: any;
-	/**
-	 * @deprecated Use {@link WebGLProgram#getAttributes getAttributes()} instead.
-	 */
-	attributes: any;
-
-	getUniforms(): WebGLUniforms;
-	getAttributes(): any;
-	destroy(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4200da5e5a6a8551dfdf404ac3253d2081bef9911103508cc1a4377b3d9369d6
+size 778

@@ -1,26 +1,3 @@
-import { LoadingManager } from './LoadingManager';
-
-/**
- * Base class for implementing loaders.
- */
-export class Loader {
-
-	constructor( manager?: LoadingManager );
-
-	crossOrigin: string;
-	path: string;
-	resourcePath: string;
-	manager: LoadingManager;
-
-	/*
-	load(): void;
-	parse(): void;
-	*/
-
-	loadAsync( url: string, onProgress?: ( event: ProgressEvent ) => void ): Promise<any>;
-
-	setCrossOrigin( crossOrigin: string ): this;
-	setPath( path: string ): this;
-	setResourcePath( resourcePath: string ): this;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c49b8746a2e3018d6c7ad36c556bae37c1d0aa5a0f9e344cba7bc6931ec0751d
+size 511

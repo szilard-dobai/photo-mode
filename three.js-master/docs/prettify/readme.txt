@@ -1,5 +1,3 @@
-Prettify syntax highlighter:
-http://code.google.com/p/google-code-prettify/
-
-Code license - Apache License 2.0
-http://www.apache.org/licenses/LICENSE-2.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:db50749749c4dde1ffd02ac3242bbc1a2f21c5ee406d21ca9b31d586437b1f06
+size 153

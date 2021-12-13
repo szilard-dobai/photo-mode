@@ -1,14 +1,3 @@
-export default /* glsl */`
-#ifdef USE_MORPHNORMALS
-
-	// morphTargetBaseInfluence is set based on BufferGeometry.morphTargetsRelative value:
-	// When morphTargetsRelative is false, this is set to 1 - sum(influences); this results in normal = sum((target - base) * influence)
-	// When morphTargetsRelative is true, this is set to 1; as a result, all morph targets are simply added to the base after weighting
-	objectNormal *= morphTargetBaseInfluence;
-	objectNormal += morphNormal0 * morphTargetInfluences[ 0 ];
-	objectNormal += morphNormal1 * morphTargetInfluences[ 1 ];
-	objectNormal += morphNormal2 * morphTargetInfluences[ 2 ];
-	objectNormal += morphNormal3 * morphTargetInfluences[ 3 ];
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:c2e9f74579407d9aa660d4550dd4ad564b5799cdc54b33163b2d3818f81c5a59
+size 701

@@ -1,28 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { WebGLCubeRenderTarget } from '../../../../src/renderers/WebGLCubeRenderTarget';
-
-export default QUnit.module( 'Renderers', () => {
-
-	QUnit.module( 'WebGLCubeRenderTarget', () => {
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "isWebGLCubeRenderTarget", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7290776845eac872b7e219414d73f28cbeae8578235a3ee11b3d991b9bb3537
+size 548

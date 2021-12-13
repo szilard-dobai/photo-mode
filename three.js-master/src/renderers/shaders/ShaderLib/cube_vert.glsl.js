@@ -1,16 +1,3 @@
-export default /* glsl */`
-varying vec3 vWorldDirection;
-
-#include <common>
-
-void main() {
-
-	vWorldDirection = transformDirection( position, modelMatrix );
-
-	#include <begin_vertex>
-	#include <project_vertex>
-
-	gl_Position.z = gl_Position.w; // set z to camera.far
-
-}
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0901b0809a31138f73f4999be6c080b8cb6c0a20dba585f1ba71c29b372331a
+size 271

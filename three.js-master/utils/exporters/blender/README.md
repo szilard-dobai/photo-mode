@@ -1,5 +1,3 @@
-# Three.js Blender Export
-
-> **NOTICE:** The Blender exporter for the Three.js JSON format has been removed, to focus on better support for the glTF workflow. For recommended alternatives, see [Loading 3D Models](https://threejs.org/docs/#manual/introduction/Loading-3D-models). The Three.js Object/Scene JSON format is still fully supported for use with [Object3D.toJSON](https://threejs.org/docs/#api/core/Object3D.toJSON), the [Editor](https://threejs.org/editor/), [THREE.ObjectLoader](https://threejs.org/docs/#api/loaders/ObjectLoader) and [converters](https://github.com/mrdoob/three.js/tree/dev/utils/converters).
->
-> If you really need the Blender Exporter you can [go back in time to r92](https://github.com/mrdoob/three.js/tree/r92).
+version https://git-lfs.github.com/spec/v1
+oid sha256:c39a0fc647de1aa2566143e66a279cc9e28b8249d184b946d37b9a42c4aec55b
+size 745

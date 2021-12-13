@@ -1,19 +1,3 @@
-import { Geometry } from './../core/Geometry';
-import { PolyhedronBufferGeometry } from './PolyhedronGeometry';
-
-export class DodecahedronBufferGeometry extends PolyhedronBufferGeometry {
-
-	constructor( radius?: number, detail?: number );
-
-}
-
-export class DodecahedronGeometry extends Geometry {
-
-	constructor( radius?: number, detail?: number );
-
-	parameters: {
-		radius: number;
-		detail: number;
-	};
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:406975e644c9a98eaee303c916a8fb895babc42b4ac65db83b704bd9808ead66
+size 406

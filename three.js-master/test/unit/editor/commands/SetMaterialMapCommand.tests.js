@@ -1,24 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../../editor/js/commands/SetMaterialMapCommand';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module( 'Commands', () => {
-
-		QUnit.module.todo( 'SetMaterialMapCommand', () => {
-
-			QUnit.test( 'write me !', ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:b88f60dbc8dab6c04adb710c4eea22ca8b1c5f76b305a515a626b883449274d5
+size 446

@@ -1,29 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { ExtrudeBufferGeometry } from '../../../../src/geometries/ExtrudeGeometry';
-
-export default QUnit.module( 'Geometries', () => {
-
-	QUnit.module( 'ExtrudeBufferGeometry', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:a98d8812578b6b65378628fd842317ddfbd190f78437f774c44cc7979e31a9e9
+size 530

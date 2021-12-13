@@ -1,24 +1,3 @@
-import { Object3D } from '../core/Object3D.js';
-
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
-function Group() {
-
-	Object3D.call( this );
-
-	this.type = 'Group';
-
-}
-
-Group.prototype = Object.assign( Object.create( Object3D.prototype ), {
-
-	constructor: Group,
-
-	isGroup: true
-
-} );
-
-
-export { Group };
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd5b07149c132608825b877cb0135dd7354cd0eee8f2833aea5130b3dd927ec9
+size 304

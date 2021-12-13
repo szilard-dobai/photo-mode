@@ -1,19 +1,3 @@
-export class PropertyMixer {
-
-	constructor( binding: any, typeName: string, valueSize: number );
-
-	binding: any;
-	valueSize: number;
-	buffer: any;
-	cumulativeWeight: number;
-	cumulativeWeightAdditive: number;
-	useCount: number;
-	referenceCount: number;
-
-	accumulate( accuIndex: number, weight: number ): void;
-	accumulateAdditive( weight: number ): void;
-	apply( accuIndex: number ): void;
-	saveOriginalState(): void;
-	restoreOriginalState(): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d153da124dee66283298d5e1c6c06cf79609172cc90305426144977496b6ab17
+size 452

@@ -1,35 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { CanvasTexture } from '../../../../src/textures/CanvasTexture';
-
-export default QUnit.module( 'Textures', () => {
-
-	QUnit.module( 'CanvasTexture', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "isCanvasTexture", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:79d21c76e3a76383c4aa3c64d2a9ef1f82a0359e86c7e804ec762a5c0c6f8270
+size 640

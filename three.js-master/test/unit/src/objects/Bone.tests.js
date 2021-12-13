@@ -1,36 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { Bone } from '../../../../src/objects/Bone';
-
-export default QUnit.module( 'Objects', () => {
-
-	QUnit.module( 'Bone', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "isBone", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb376c39371cce54954e27aa191df027ee16001c4a2450869f25ead812e57b0a
+size 603

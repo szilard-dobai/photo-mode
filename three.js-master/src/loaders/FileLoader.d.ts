@@ -1,24 +1,3 @@
-import { Loader } from './Loader';
-import { LoadingManager } from './LoadingManager';
-
-export class FileLoader extends Loader {
-
-	constructor( manager?: LoadingManager );
-
-	mimeType: undefined | MimeType;
-	responseType: undefined |string;
-	withCredentials: undefined |string;
-	requestHeader: undefined | { [header: string]: string };
-
-	load(
-		url: string,
-		onLoad?: ( response: string | ArrayBuffer ) => void,
-		onProgress?: ( request: ProgressEvent ) => void,
-		onError?: ( event: ErrorEvent ) => void
-	): any;
-	setMimeType( mimeType: MimeType ): FileLoader;
-	setResponseType( responseType: string ): FileLoader;
-	setWithCredentials( value: boolean ): FileLoader;
-	setRequestHeader( value: { [header: string]: string } ): FileLoader;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d7e74bc758d5a22be1f265c4ad62b75f3b68c1efe4bed0b975e2a11bbbe2292
+size 740

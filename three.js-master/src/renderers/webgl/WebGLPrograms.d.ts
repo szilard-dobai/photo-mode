@@ -1,30 +1,3 @@
-import { WebGLRenderer } from './../WebGLRenderer';
-import { WebGLProgram } from './WebGLProgram';
-import { WebGLCapabilities } from './WebGLCapabilities';
-import { WebGLExtensions } from './WebGLExtensions';
-import { Material } from './../../materials/Material';
-import { Scene } from './../../scenes/Scene';
-
-export class WebGLPrograms {
-
-	constructor( renderer: WebGLRenderer, extensions: WebGLExtensions, capabilities: WebGLCapabilities );
-
-	programs: WebGLProgram[];
-
-	getParameters(
-		material: Material,
-		lights: object[],
-		shadows: object[],
-		scene: Scene,
-		nClipPlanes: number,
-		nClipIntersection: number,
-		object: any
-	): any;
-	getProgramCacheKey( parameters: any ): string;
-	acquireProgram(
-		parameters: any,
-		cacheKey: string
-	): WebGLProgram;
-	releaseProgram( program: WebGLProgram ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3fa300e10bf067acf193c223bc7104fecd52f921f07d5169bf00b178cfc7fe5
+size 815

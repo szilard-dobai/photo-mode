@@ -1,34 +1,3 @@
-import { Mapping } from '../constants';
-import { Texture } from '../textures/Texture';
-
-export namespace ImageUtils {
-
-	export function getDataURL(
-		image: any,
-	): string;
-
-	/**
-	 * @deprecated
-	 */
-	export let crossOrigin: string;
-
-	/**
-	 * @deprecated Use {@link TextureLoader THREE.TextureLoader()} instead.
-	 */
-	export function loadTexture(
-		url: string,
-		mapping?: Mapping,
-		onLoad?: ( texture: Texture ) => void,
-		onError?: ( message: string ) => void
-	): Texture;
-
-	/**
-	 * @deprecated Use {@link CubeTextureLoader THREE.CubeTextureLoader()} instead.
-	 */
-	export function loadTextureCube(
-		array: string[],
-		mapping?: Mapping,
-		onLoad?: ( texture: Texture ) => void,
-		onError?: ( message: string ) => void
-	): Texture;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6fd54ef41facbe3a7a1faaa15668675c300fefc362f7a22848b3ad9b31afff0
+size 740

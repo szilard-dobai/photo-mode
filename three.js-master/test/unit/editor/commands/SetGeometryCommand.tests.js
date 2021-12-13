@@ -1,24 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { NothingsIsExportedYet } from '../../../../editor/js/commands/SetGeometryCommand';
-
-export default QUnit.module( 'Editor', () => {
-
-	QUnit.module( 'Commands', () => {
-
-		QUnit.module.todo( 'SetGeometryCommand', () => {
-
-			QUnit.test( 'write me !', ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:41151e2adcbf26d2b3e2d2dfe6339634d6ce2f4b6e543cb3ce2e6fa3c02ad9c9
+size 440

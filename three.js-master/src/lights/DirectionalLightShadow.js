@@ -1,29 +1,3 @@
-import { LightShadow } from './LightShadow.js';
-import { OrthographicCamera } from '../cameras/OrthographicCamera.js';
-
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
-function DirectionalLightShadow() {
-
-	LightShadow.call( this, new OrthographicCamera( - 5, 5, 5, - 5, 0.5, 500 ) );
-
-}
-
-DirectionalLightShadow.prototype = Object.assign( Object.create( LightShadow.prototype ), {
-
-	constructor: DirectionalLightShadow,
-
-	isDirectionalLightShadow: true,
-
-	updateMatrices: function ( light ) {
-
-		LightShadow.prototype.updateMatrices.call( this, light );
-
-	}
-
-} );
-
-
-export { DirectionalLightShadow };
+version https://git-lfs.github.com/spec/v1
+oid sha256:15c5ad73205bab8bfd13c0fc629da5cd0d035a5567c8d35e083905bb3a663e71
+size 600

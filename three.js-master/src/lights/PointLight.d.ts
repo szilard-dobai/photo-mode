@@ -1,36 +1,3 @@
-import { Color } from './../math/Color';
-import { Light } from './Light';
-import { PointLightShadow } from './PointLightShadow';
-
-/**
- * @example
- * var light = new THREE.PointLight( 0xff0000, 1, 100 );
- * light.position.set( 50, 50, 50 );
- * scene.add( light );
- */
-export class PointLight extends Light {
-
-	constructor(
-		color?: Color | string | number,
-		intensity?: number,
-		distance?: number,
-		decay?: number
-	);
-
-	/*
-	 * Light's intensity.
-	 * Default - 1.0.
-	 */
-	intensity: number;
-
-	/**
-	 * If non-zero, light will attenuate linearly from maximum intensity at light position down to zero at distance.
-	 * Default - 0.0.
-	 */
-	distance: number;
-
-	decay: number;
-	shadow: PointLightShadow;
-	power: number;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0582cdf464185396fb3fa863087e40764261c7642332ce75e240781017c59f28
+size 719

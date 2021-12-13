@@ -1,28 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { Lensflare } from '../../../../examples/jsm/objects/Lensflare';
-
-export default QUnit.module( 'Objects', () => {
-
-	QUnit.module( 'Lensflare', () => {
-
-		// INHERITANCE
-		QUnit.todo( "Extending", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "Instancing", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:77d8af11b8d5ca82f066f6e67079a6785f62e03b9ec89e2ecf01787ce9130112
+size 502

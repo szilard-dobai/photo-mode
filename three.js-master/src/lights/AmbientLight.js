@@ -1,26 +1,3 @@
-import { Light } from './Light.js';
-
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
-function AmbientLight( color, intensity ) {
-
-	Light.call( this, color, intensity );
-
-	this.type = 'AmbientLight';
-
-	this.castShadow = undefined;
-
-}
-
-AmbientLight.prototype = Object.assign( Object.create( Light.prototype ), {
-
-	constructor: AmbientLight,
-
-	isAmbientLight: true
-
-} );
-
-
-export { AmbientLight };
+version https://git-lfs.github.com/spec/v1
+oid sha256:44d398e92762bc8ef97977282160d8b48d6864dc003c4fbdd8287c89bdff9946
+size 395

@@ -1,27 +1,3 @@
-import { Color } from './../math/Color';
-import { Texture } from './../textures/Texture';
-import { MaterialParameters, Material } from './Material';
-
-export interface SpriteMaterialParameters extends MaterialParameters {
-	color?: Color | string | number;
-	map?: Texture | null;
-	alphaMap?: Texture | null;
-	rotation?: number;
-	sizeAttenuation?: boolean;
-}
-
-export class SpriteMaterial extends Material {
-
-	constructor( parameters?: SpriteMaterialParameters );
-
-	color: Color;
-	map: Texture | null;
-	alphaMap: Texture | null;
-	rotation: number;
-	sizeAttenuation: boolean;
-	readonly isSpriteMaterial: true;
-
-	setValues( parameters: SpriteMaterialParameters ): void;
-	copy( source: SpriteMaterial ): this;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5387f981869c138f4b6136f287930ac9b08c1d6723db9a108b125bd4a49508f6
+size 706

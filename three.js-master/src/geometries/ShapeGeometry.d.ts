@@ -1,18 +1,3 @@
-import { Shape } from './../extras/core/Shape';
-import { Geometry } from './../core/Geometry';
-import { BufferGeometry } from './../core/BufferGeometry';
-
-export class ShapeBufferGeometry extends BufferGeometry {
-
-	constructor( shapes: Shape | Shape[], curveSegments?: number );
-
-}
-
-export class ShapeGeometry extends Geometry {
-
-	constructor( shapes: Shape | Shape[], curveSegments?: number );
-
-	addShapeList( shapes: Shape[], options: any ): ShapeGeometry;
-	addShape( shape: Shape, options?: any ): void;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2066e917288a1811f915641cb367054bab03c76b4842dd19efd3e87b6963ce39
+size 510

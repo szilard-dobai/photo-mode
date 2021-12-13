@@ -1,32 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { WebGLUtils } from '../../../../../src/renderers/webgl/WebGLUtils';
-
-export default QUnit.module( 'Renderers', () => {
-
-	QUnit.module( 'WebGL', () => {
-
-		QUnit.module( 'WebGLUtils', () => {
-
-			// INSTANCING
-			QUnit.todo( "Instancing", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-			// PUBLIC STUFF
-			QUnit.todo( "convert", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a1a238c2fc252e3dfdaf55c3c6ab726542e3982b3419ab07a371a2eb6587317
+size 558

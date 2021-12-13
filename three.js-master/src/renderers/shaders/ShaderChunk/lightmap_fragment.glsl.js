@@ -1,8 +1,3 @@
-export default /* glsl */`
-#ifdef USE_LIGHTMAP
-
-	vec4 lightMapTexel= texture2D( lightMap, vUv2 );
-	reflectedLight.indirectDiffuse += PI * lightMapTexelToLinear( lightMapTexel ).rgb * lightMapIntensity; // factor of PI should not be present; included here to prevent breakage
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ccf8b3b29a46ca4898b7cde6c14b38ed3e8f83b4fdd5a0164029b4373533b40
+size 286

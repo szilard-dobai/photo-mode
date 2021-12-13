@@ -1,26 +1,3 @@
-import { Bone } from './Bone';
-import { Matrix4 } from './../math/Matrix4';
-import { DataTexture } from './../textures/DataTexture';
-
-export class Skeleton {
-
-	constructor( bones: Bone[], boneInverses?: Matrix4[] );
-
-	/**
-	 * @deprecated This property has been removed completely.
-	 */
-	useVertexTexture: boolean;
-	bones: Bone[];
-	boneMatrices: Float32Array;
-	boneTexture: undefined | DataTexture;
-	boneInverses: Matrix4[];
-
-	calculateInverses( bone: Bone ): void;
-	pose(): void;
-	update(): void;
-	clone(): Skeleton;
-	getBoneByName( name: string ): undefined | Bone;
-
-	dispose() :void ;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7046b2c7193672f40535176e47a08edec0ab99147e2eec33c9fb9f97063a2e05
+size 590

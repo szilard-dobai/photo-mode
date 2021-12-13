@@ -1,26 +1,3 @@
-import { Scene } from './../../scenes/Scene';
-import { Camera } from './../../cameras/Camera';
-import { WebGLRenderer } from '../WebGLRenderer';
-import { ShadowMapType } from '../../constants';
-
-export class WebGLShadowMap {
-
-	constructor(
-		_renderer: WebGLRenderer,
-		_objects: any[],
-		maxTextureSize: number
-	);
-
-	enabled: boolean;
-	autoUpdate: boolean;
-	needsUpdate: boolean;
-	type: ShadowMapType;
-
-	render( scene: Scene, camera: Camera ): void;
-
-	/**
-	 * @deprecated Use {@link WebGLShadowMap#renderReverseSided .shadowMap.renderReverseSided} instead.
-	 */
-	cullFace: any;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a0ef9a0274b280a806e721805ba6417c03cfbe4e5a4b0d1c427c589ca675bfe
+size 582

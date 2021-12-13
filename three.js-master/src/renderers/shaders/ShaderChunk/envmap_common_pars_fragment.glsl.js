@@ -1,15 +1,3 @@
-export default /* glsl */`
-#ifdef USE_ENVMAP
-
-	uniform float envMapIntensity;
-	uniform float flipEnvMap;
-	uniform int maxMipLevel;
-
-	#ifdef ENVMAP_TYPE_CUBE
-		uniform samplerCube envMap;
-	#else
-		uniform sampler2D envMap;
-	#endif
-	
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:1eb45cf39ca94eeb54ea872c15a8b19829ac98d37dd44ac9c69c226b46a49c92
+size 242

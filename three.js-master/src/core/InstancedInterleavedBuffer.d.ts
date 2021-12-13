@@ -1,16 +1,3 @@
-import { InterleavedBuffer } from './InterleavedBuffer';
-
-/**
- * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js">src/core/InstancedInterleavedBuffer.js</a>
- */
-export class InstancedInterleavedBuffer extends InterleavedBuffer {
-
-	constructor(
-		array: ArrayLike<number>,
-		stride: number,
-		meshPerAttribute?: number
-	);
-
-	meshPerAttribute: number;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc561cd04e218b75406291643e319a2fd3e65a856ba770d3fa0d308aa6179968
+size 405

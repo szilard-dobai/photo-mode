@@ -1,11 +1,3 @@
-import { Object3D } from './../core/Object3D';
-
-// Objects //////////////////////////////////////////////////////////////////////////////////
-
-export class Bone extends Object3D {
-
-	constructor();
-	readonly isBone: true;
-	type: 'Bone';
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:884ca9a302751744e80f8c14d866e3e7063029725bef8228647a8678ac4f425b
+size 239

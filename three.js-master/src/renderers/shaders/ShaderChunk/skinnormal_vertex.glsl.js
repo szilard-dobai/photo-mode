@@ -1,20 +1,3 @@
-export default /* glsl */`
-#ifdef USE_SKINNING
-
-	mat4 skinMatrix = mat4( 0.0 );
-	skinMatrix += skinWeight.x * boneMatX;
-	skinMatrix += skinWeight.y * boneMatY;
-	skinMatrix += skinWeight.z * boneMatZ;
-	skinMatrix += skinWeight.w * boneMatW;
-	skinMatrix  = bindMatrixInverse * skinMatrix * bindMatrix;
-
-	objectNormal = vec4( skinMatrix * vec4( objectNormal, 0.0 ) ).xyz;
-
-	#ifdef USE_TANGENT
-
-		objectTangent = vec4( skinMatrix * vec4( objectTangent, 0.0 ) ).xyz;
-
-	#endif
-
-#endif
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:1bf23043aeb93015e12c30fc37299c8a8edf2449e0944320d8e3b775c0c0f35f
+size 482

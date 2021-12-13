@@ -1,10 +1,3 @@
-import { Color } from './../math/Color';
-import { LightProbe } from './LightProbe';
-
-export class AmbientLightProbe extends LightProbe {
-
-	constructor( color?: Color | string | number, intensity?: number );
-
-	readonly isAmbientLightProbe: true;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f76d529e6a2438ecaed261b23d3e152a2a3452e15e0a6256115cbf1ac40da866
+size 248

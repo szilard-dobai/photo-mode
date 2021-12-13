@@ -1,30 +1,3 @@
-import { InterleavedBufferAttribute } from './InterleavedBufferAttribute';
-import { Usage } from '../constants';
-
-/**
- * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InterleavedBuffer.js">src/core/InterleavedBuffer.js</a>
- */
-export class InterleavedBuffer {
-
-	constructor( array: ArrayLike<number>, stride: number );
-
-	array: ArrayLike<number>;
-	stride: number;
-	usage: Usage;
-	updateRange: { offset: number; count: number };
-	version: number;
-	length: number;
-	count: number;
-	needsUpdate: boolean;
-
-	setUsage( usage: Usage ): InterleavedBuffer;
-	clone(): this;
-	copy( source: InterleavedBuffer ): this;
-	copyAt(
-		index1: number,
-		attribute: InterleavedBufferAttribute,
-		index2: number
-	): InterleavedBuffer;
-	set( value: ArrayLike<number>, index: number ): InterleavedBuffer;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e62b0ff4e5ee50d25577c5d79842627af68e04620b2fba7d533de7ecb30f50b
+size 810

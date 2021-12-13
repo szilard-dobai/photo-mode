@@ -1,32 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { WebGLMorphtargets } from '../../../../../src/renderers/webgl/WebGLMorphtargets';
-
-export default QUnit.module( 'Renderers', () => {
-
-	QUnit.module( 'WebGL', () => {
-
-		QUnit.module( 'WebGLMorphtargets', () => {
-
-			// INSTANCING
-			QUnit.todo( "Instancing", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-			// PUBLIC STUFF
-			QUnit.todo( "update", ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:4012aa28623498685ca5ed2860a553da04c2fda32b8050ef219b02d151ea6806
+size 578

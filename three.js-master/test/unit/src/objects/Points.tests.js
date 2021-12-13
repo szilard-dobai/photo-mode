@@ -1,35 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { Points } from '../../../../src/objects/Points';
-
-export default QUnit.module( 'Objects', () => {
-
-	QUnit.module( 'Points', () => {
-
-		// INHERITANCE
-		QUnit.todo( "isPoints", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// INSTANCING
-		QUnit.todo( "raycast", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		// PUBLIC STUFF
-		QUnit.todo( "clone", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:113fae890d891bddf4f4f9bfda7afea130e49cda2281aae6efc1ded78075db33
+size 603

@@ -1,24 +1,3 @@
-/**
- * @author TristanVALCKE / https://github.com/Itee
- */
-/* global QUnit */
-
-import { ShaderLib } from '../../../../../src/renderers/shaders/ShaderLib';
-
-export default QUnit.module( 'Renderers', () => {
-
-	QUnit.module( 'Shaders', () => {
-
-		QUnit.module( 'ShaderLib', () => {
-
-			QUnit.todo( 'write me !', ( assert ) => {
-
-				assert.ok( false, "everything's gonna be alright" );
-
-			} );
-
-		} );
-
-	} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c1359856a898cbd6c447a6a7e12e0287afe48156c9038b0fcc286a829951830
+size 413

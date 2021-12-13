@@ -1,17 +1,3 @@
-import { Vector3 } from './Vector3';
-
-export class Cylindrical {
-
-	constructor( radius?: number, theta?: number, y?: number );
-
-	radius: number;
-	theta: number;
-	y: number;
-
-	clone(): this;
-	copy( other: Cylindrical ): this;
-	set( radius: number, theta: number, y: number ): this;
-	setFromVector3( vec3: Vector3 ): this;
-	setFromCartesianCoords( x: number, y: number, z: number ): this;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:563ef8f6ec51af0297e1541edfda7d5a573fa459f14798fd5c78eb6659dc2d52
+size 390

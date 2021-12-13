@@ -1,14 +1,3 @@
-import { Interpolant } from '../Interpolant';
-
-export class QuaternionLinearInterpolant extends Interpolant {
-
-	constructor(
-		parameterPositions: any,
-		samplesValues: any,
-		sampleSize: number,
-		resultBuffer?: any
-	);
-
-	interpolate_( i1: number, t0: number, t: number, t1: number ): any;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6eb0074c07aa60be1bfdeba02bc0075808d04b6fae7a76268259088114c9193d
+size 294
