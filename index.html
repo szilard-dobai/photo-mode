@@ -36,6 +36,8 @@
         var spotlightSourceLabel1, spotlightTargetLabel1, spotlight1, spotlightHelper1;
         var spotlightSourceLabel2, spotlightTargetLabel2, spotlight2, spotlightHelper2;
 
+        const RESOURCES_URL = "https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2"
+
         init();
         //render(); // remove when using next line for animation loop (requestAnimationFrame)
 
@@ -92,144 +94,144 @@
                 {
                     name: 'Blue Clouds',
                     texture: sceneLoader.load([
-                        './skybox/clouds/bluecloud_ft.jpg',
-                        './skybox/clouds/bluecloud_bk.jpg',
-                        './skybox/clouds/bluecloud_up.jpg',
-                        './skybox/clouds/bluecloud_dn.jpg',
-                        './skybox/clouds/bluecloud_rt.jpg',
-                        './skybox/clouds/bluecloud_lf.jpg'
+                        `${RESOURCES_URL}/skybox/clouds/bluecloud_ft.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/bluecloud_bk.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/bluecloud_up.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/bluecloud_dn.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/bluecloud_rt.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/bluecloud_lf.jpg`
                     ])
                 },
                 {
                     name: 'Brown Clouds',
                     texture: sceneLoader.load([
-                        './skybox/clouds/browncloud_ft.jpg',
-                        './skybox/clouds/browncloud_bk.jpg',
-                        './skybox/clouds/browncloud_up.jpg',
-                        './skybox/clouds/browncloud_dn.jpg',
-                        './skybox/clouds/browncloud_rt.jpg',
-                        './skybox/clouds/browncloud_lf.jpg'
+                        `${RESOURCES_URL}/skybox/clouds/browncloud_ft.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/browncloud_bk.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/browncloud_up.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/browncloud_dn.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/browncloud_rt.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/browncloud_lf.jpg`
                     ])
                 },
                 {
                     name: 'Gray Clouds',
                     texture: sceneLoader.load([
-                        './skybox/clouds/graycloud_ft.jpg',
-                        './skybox/clouds/graycloud_bk.jpg',
-                        './skybox/clouds/graycloud_up.jpg',
-                        './skybox/clouds/graycloud_dn.jpg',
-                        './skybox/clouds/graycloud_rt.jpg',
-                        './skybox/clouds/graycloud_lf.jpg'
+                        `${RESOURCES_URL}/skybox/clouds/graycloud_ft.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/graycloud_bk.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/graycloud_up.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/graycloud_dn.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/graycloud_rt.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/graycloud_lf.jpg`
                     ])
                 },
                 {
                     name: 'Yellow Clouds',
                     texture: sceneLoader.load([
-                        './skybox/clouds/yellowcloud_ft.jpg',
-                        './skybox/clouds/yellowcloud_bk.jpg',
-                        './skybox/clouds/yellowcloud_up.jpg',
-                        './skybox/clouds/yellowcloud_dn.jpg',
-                        './skybox/clouds/yellowcloud_rt.jpg',
-                        './skybox/clouds/yellowcloud_lf.jpg'
+                        `${RESOURCES_URL}/skybox/clouds/yellowcloud_ft.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/yellowcloud_bk.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/yellowcloud_up.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/yellowcloud_dn.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/yellowcloud_rt.jpg`,
+                        `${RESOURCES_URL}/skybox/clouds/yellowcloud_lf.jpg`
                     ])
                 },
                 {
                     name: 'Arid',
                     texture: sceneLoader.load([
-                        './skybox/arid/arid2_ft.jpg',
-                        './skybox/arid/arid2_bk.jpg',
-                        './skybox/arid/arid2_up.jpg',
-                        './skybox/arid/arid2_dn.jpg',
-                        './skybox/arid/arid2_rt.jpg',
-                        './skybox/arid/arid2_lf.jpg'
+                        `${RESOURCES_URL}/skybox/arid/arid2_ft.jpg`,
+                        `${RESOURCES_URL}/skybox/arid/arid2_bk.jpg`,
+                        `${RESOURCES_URL}/skybox/arid/arid2_up.jpg`,
+                        `${RESOURCES_URL}/skybox/arid/arid2_dn.jpg`,
+                        `${RESOURCES_URL}/skybox/arid/arid2_rt.jpg`,
+                        `${RESOURCES_URL}/skybox/arid/arid2_lf.jpg`
                     ])
                 },
                 {
                     name: 'Garage',
                     texture: sceneLoader.load([
-                        './skybox/garage/px.png',
-                        './skybox/garage/nx.png',
-                        './skybox/garage/py.png',
-                        './skybox/garage/ny.png',
-                        './skybox/garage/pz.png',
-                        './skybox/garage/nz.png'
+                        `${RESOURCES_URL}/skybox/garage/px.png`,
+                        `${RESOURCES_URL}/skybox/garage/nx.png`,
+                        `${RESOURCES_URL}/skybox/garage/py.png`,
+                        `${RESOURCES_URL}/skybox/garage/ny.png`,
+                        `${RESOURCES_URL}/skybox/garage/pz.png`,
+                        `${RESOURCES_URL}/skybox/garage/nz.png`
                     ])
                 },
                 {
                     name: 'Autoshop',
                     texture: sceneLoader.load([
-                        './skybox/autoshop/px.png',
-                        './skybox/autoshop/nx.png',
-                        './skybox/autoshop/py.png',
-                        './skybox/autoshop/ny.png',
-                        './skybox/autoshop/pz.png',
-                        './skybox/autoshop/nz.png'
+                        `${RESOURCES_URL}/skybox/autoshop/px.png`,
+                        `${RESOURCES_URL}/skybox/autoshop/nx.png`,
+                        `${RESOURCES_URL}/skybox/autoshop/py.png`,
+                        `${RESOURCES_URL}/skybox/autoshop/ny.png`,
+                        `${RESOURCES_URL}/skybox/autoshop/pz.png`,
+                        `${RESOURCES_URL}/skybox/autoshop/nz.png`
                     ])
                 },
                 {
                     name: 'Machineshop',
                     texture: sceneLoader.load([
-                        './skybox/machine_shop/px.png',
-                        './skybox/machine_shop/nx.png',
-                        './skybox/machine_shop/py.png',
-                        './skybox/machine_shop/ny.png',
-                        './skybox/machine_shop/pz.png',
-                        './skybox/machine_shop/nz.png'
+                        `${RESOURCES_URL}/skybox/machine_shop/px.png`,
+                        `${RESOURCES_URL}/skybox/machine_shop/nx.png`,
+                        `${RESOURCES_URL}/skybox/machine_shop/py.png`,
+                        `${RESOURCES_URL}/skybox/machine_shop/ny.png`,
+                        `${RESOURCES_URL}/skybox/machine_shop/pz.png`,
+                        `${RESOURCES_URL}/skybox/machine_shop/nz.png`
                     ])
                 },
                 {
                     name: 'Parliament',
                     texture: sceneLoader.load([
-                        './skybox/Parliament/posx.jpg',
-                        './skybox/Parliament/negx.jpg',
-                        './skybox/Parliament/posy.jpg',
-                        './skybox/Parliament/negy.jpg',
-                        './skybox/Parliament/posz.jpg',
-                        './skybox/Parliament/negz.jpg'
+                        `${RESOURCES_URL}/skybox/Parliament/posx.jpg`,
+                        `${RESOURCES_URL}/skybox/Parliament/negx.jpg`,
+                        `${RESOURCES_URL}/skybox/Parliament/posy.jpg`,
+                        `${RESOURCES_URL}/skybox/Parliament/negy.jpg`,
+                        `${RESOURCES_URL}/skybox/Parliament/posz.jpg`,
+                        `${RESOURCES_URL}/skybox/Parliament/negz.jpg`
                     ])
                 },
                 {
                     name: 'Lycksele',
                     texture: sceneLoader.load([
-                        './skybox/lycksele3/posx.jpg',
-                        './skybox/lycksele3/negx.jpg',
-                        './skybox/lycksele3/posy.jpg',
-                        './skybox/lycksele3/negy.jpg',
-                        './skybox/lycksele3/posz.jpg',
-                        './skybox/lycksele3/negz.jpg'
+                        `${RESOURCES_URL}/skybox/lycksele3/posx.jpg`,
+                        `${RESOURCES_URL}/skybox/lycksele3/negx.jpg`,
+                        `${RESOURCES_URL}/skybox/lycksele3/posy.jpg`,
+                        `${RESOURCES_URL}/skybox/lycksele3/negy.jpg`,
+                        `${RESOURCES_URL}/skybox/lycksele3/posz.jpg`,
+                        `${RESOURCES_URL}/skybox/lycksele3/negz.jpg`
                     ])
                 },
                 {
                     name: 'Fort Point',
                     texture: sceneLoader.load([
-                        './skybox/FortPoint/posx.jpg',
-                        './skybox/FortPoint/negx.jpg',
-                        './skybox/FortPoint/posy.jpg',
-                        './skybox/FortPoint/negy.jpg',
-                        './skybox/FortPoint/posz.jpg',
-                        './skybox/FortPoint/negz.jpg'
+                        `${RESOURCES_URL}/skybox/FortPoint/posx.jpg`,
+                        `${RESOURCES_URL}/skybox/FortPoint/negx.jpg`,
+                        `${RESOURCES_URL}/skybox/FortPoint/posy.jpg`,
+                        `${RESOURCES_URL}/skybox/FortPoint/negy.jpg`,
+                        `${RESOURCES_URL}/skybox/FortPoint/posz.jpg`,
+                        `${RESOURCES_URL}/skybox/FortPoint/negz.jpg`
                     ])
                 },
                 {
                     name: 'Gamla Stan',
                     texture: sceneLoader.load([
-                        './skybox/GamlaStan2/posx.jpg',
-                        './skybox/GamlaStan2/negx.jpg',
-                        './skybox/GamlaStan2/posy.jpg',
-                        './skybox/GamlaStan2/negy.jpg',
-                        './skybox/GamlaStan2/posz.jpg',
-                        './skybox/GamlaStan2/negz.jpg'
+                        `${RESOURCES_URL}/skybox/GamlaStan2/posx.jpg`,
+                        `${RESOURCES_URL}/skybox/GamlaStan2/negx.jpg`,
+                        `${RESOURCES_URL}/skybox/GamlaStan2/posy.jpg`,
+                        `${RESOURCES_URL}/skybox/GamlaStan2/negy.jpg`,
+                        `${RESOURCES_URL}/skybox/GamlaStan2/posz.jpg`,
+                        `${RESOURCES_URL}/skybox/GamlaStan2/negz.jpg`
                     ])
                 },
                 {
                     name: 'Plain White',
                     texture: sceneLoader.load([
-                        './skybox/white/posx.jpg',
-                        './skybox/white/negx.jpg',
-                        './skybox/white/posy.jpg',
-                        './skybox/white/negy.jpg',
-                        './skybox/white/posz.jpg',
-                        './skybox/white/negz.jpg'
+                        `${RESOURCES_URL}/skybox/white/posx.jpg`,
+                        `${RESOURCES_URL}/skybox/white/negx.jpg`,
+                        `${RESOURCES_URL}/skybox/white/posy.jpg`,
+                        `${RESOURCES_URL}/skybox/white/negy.jpg`,
+                        `${RESOURCES_URL}/skybox/white/posz.jpg`,
+                        `${RESOURCES_URL}/skybox/white/negz.jpg`
                     ])
                 },
             ]
@@ -264,42 +266,42 @@
                     name: 'Toyota Land Cruiser',
                     
 
-                    url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/toyota-land-cruiser/scene.gltf',
+                    url: `${RESOURCES_URL}/models/toyota-land-cruiser/scene.gltf`,
                     yMan: [1, 0, 0]
                 },
                 {
                     name: 'ZIS-101a Sport',
-                    url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/zis-101a-sport-1938/scene.gltf',
+                    url: `${RESOURCES_URL}/models/zis-101a-sport-1938/scene.gltf`,
                     yMan: [0, 2, 0]
                 },
                 {
                     name: 'Porsche 356',
-                    url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/porsche-356/scene.gltf',
+                    url: `${RESOURCES_URL}/models/porsche-356/scene.gltf`,
                     yMan: [1, 1, 0],
                     scale: 40
                 },
                 {
                     name: 'Alfa Romeo Stradale',
-                    url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/alfa-romeo-stradale/scene.gltf',
+                    url: `${RESOURCES_URL}/models/alfa-romeo-stradale/scene.gltf`,
                     yMan: [0, 0, 7],
                     scale: 500
                 },
                 // {
                 //     name: 'BMW 3 Series E90',
-                //     url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/bmw-e90/scene.gltf',
+                //     url: `${RESOURCES_URL}/models/bmw-e90/scene.gltf`,
                 //     yMan: [1, 0, 0],
                 //     scale: 40
                 // },
                 {
                     name: 'BMW M5 E39',
-                    url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/bmw-m5-e39/scene.gltf',
+                    url: `${RESOURCES_URL}/models/bmw-m5-e39/scene.gltf`,
                     yMan: [0, 0, 7],
                     rotation: [0, Math.PI, 0],
                     scale: 20
                 },
                 {
                     name: 'Honda Del Sol',
-                    url: 'https://media.githubusercontent.com/media/szilard-dobai/photo-mode/master-redo-2/models/honda-del-sol/scene.gltf',
+                    url: `${RESOURCES_URL}/models/honda-del-sol/scene.gltf`,
                     yMan: [0, 0, 7],
                     rotation: [0, Math.PI, 0],
                     scale: 0.5
@@ -367,26 +369,26 @@
             // FLOOR
             var floorGeometry = new THREE.PlaneGeometry(100000, 100000);
             let floorTexture = [
-                { name: 'Concrete 1A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-08_s100-g050.png') },
-                { name: 'Concrete 1B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-08_b005.png') },
-                { name: 'Concrete 2A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-16_b005.png') },
-                { name: 'Concrete 2B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-16_d100.png') },
-                { name: 'Concrete 2C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-16_s050-g025.png') },
-                { name: 'Concrete 3A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-32_b005.png') },
-                { name: 'Concrete 3B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-32_d100.png') },
-                { name: 'Concrete 3C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_concrete-32_s025-g050.png') },
-                { name: 'Concrete 4', texture: new THREE.TextureLoader().load('./textures/floor/WM_Concrete-120_1024.png') },
-                { name: 'Pavement 1A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_pavement+06_b030.jpg') },
-                { name: 'Pavement 1B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_pavement+06_d100.jpg') },
-                { name: 'Pavement 1C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_pavement+06_s100+(g015).jpg') },
-                { name: 'Tiles 1A', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_tiles+12_b005.jpg') },
-                { name: 'Tiles 1B', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_tiles+12_d100.jpg') },
-                { name: 'Tiles 1C', texture: new THREE.TextureLoader().load('./textures/floor/arroway.de_tiles+12_s100+g050.jpg') },
-                { name: 'Tiles 2', texture: new THREE.TextureLoader().load('./textures/floor/boden_0117_c.jpg') },
-                { name: 'Steel', texture: new THREE.TextureLoader().load('./textures/floor/FloorTreadPattern-3v2_UR_1024.png') },
-                { name: 'Grass', texture: new THREE.TextureLoader().load('./textures/floor/gras_0040_c.jpg') },
-                { name: 'Gravel', texture: new THREE.TextureLoader().load('./textures/floor/Gravel-2_UR_1024.png') },
-                { name: 'Ground', texture: new THREE.TextureLoader().load('./textures/floor/groundv1_01.jpg') }
+                { name: 'Concrete 1A', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-08_s100-g050.png`) },
+                { name: 'Concrete 1B', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-08_b005.png`) },
+                { name: 'Concrete 2A', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-16_b005.png`) },
+                { name: 'Concrete 2B', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-16_d100.png`) },
+                { name: 'Concrete 2C', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-16_s050-g025.png`) },
+                { name: 'Concrete 3A', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-32_b005.png`) },
+                { name: 'Concrete 3B', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-32_d100.png`) },
+                { name: 'Concrete 3C', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_concrete-32_s025-g050.png`) },
+                { name: 'Concrete 4', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/WM_Concrete-120_1024.png`) },
+                { name: 'Pavement 1A', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_pavement+06_b030.jpg`) },
+                { name: 'Pavement 1B', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_pavement+06_d100.jpg`) },
+                { name: 'Pavement 1C', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_pavement+06_s100+(g015).jpg`) },
+                { name: 'Tiles 1A', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_tiles+12_b005.jpg`) },
+                { name: 'Tiles 1B', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_tiles+12_d100.jpg`) },
+                { name: 'Tiles 1C', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/arroway.de_tiles+12_s100+g050.jpg`) },
+                { name: 'Tiles 2', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/boden_0117_c.jpg`) },
+                { name: 'Steel', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/FloorTreadPattern-3v2_UR_1024.png`) },
+                { name: 'Grass', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/gras_0040_c.jpg`) },
+                { name: 'Gravel', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/Gravel-2_UR_1024.png`) },
+                { name: 'Ground', texture: new THREE.TextureLoader().load(`${RESOURCES_URL}/textures/floor/groundv1_01.jpg`) }
             ]
 
             floorTexture.forEach((item, index) => {
