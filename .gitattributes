@@ -1,3 +1,4 @@
 * !text !filter !merge !diff
+*.bin,*.gltf filter=lfs diff=lfs merge=lfs -text
 *.gltf filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
